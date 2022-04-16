@@ -1,0 +1,17 @@
+header{
+    background-color: #000000;
+    border-width: 50%;
+    border-color: blue;
+    padding-block: 4%;
+}
+
+body{
+    background-image: src="restaurant_background.jpg";
+}
+
+#Title{
+    color: rgb(192, 192, 10);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+}
