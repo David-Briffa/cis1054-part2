@@ -1,22 +1,48 @@
-body{
+body {
     background-color: #000000;
-    color:hsla(51, 100%, 50%)
+    color: rgb(255, 217, 0);
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.2em;
+    margin: 2%;
 }
 
-hr{
-    border-top: 2px solid rgb(214, 193, 0);
+hr {
+    border-top: 3.5px solid rgb(214, 193, 0);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-  }
+}
+
+.middle{
+    background-image: url("./images/background.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.border {
+    border: solid rgb(255, 217, 0);
+    border-width: 3.5px;
+    border-style: outset;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.blackBorder{
+    border: solid #000000;
+}
 
 .container {
+    margin: 2%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: hsla(51, 100%, 50%, 0.7);
+    background-color: rgba(255, 217, 0, 0.75);
     justify-content: center;
     align-content: center;
 
@@ -31,46 +57,39 @@ hr{
     width: 50px;
     min-width: 40vh;
     max-width: 550px;
-    flex: auto;
+    flex: 1 1 auto;
 }
 
 .sideTxt {
     display: inline-block;
     padding: 3%;
     max-width: 800px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    flex: auto;
+    flex: 1 1 auto;
     color: #000000;
 }
 
 
 .divider {
-    height: 40px;
+    height: 70px;
+    opacity: 0;
 }
 
-.footer{
+.footer {
     display: block;
     text-align: center;
     padding-right: 3%;
-  padding-left: 3%;
+    padding-left: 3%;
 }
 
-.footerText{
+.footerText {
     font-weight: bold;
     padding-right: 3%;
-  padding-left: 3%;
+    padding-left: 3%;
 }
 
 /*
-body{
-    background: #000000;
-    color: #ffd900d9;
-}
-
-a{
-    text-decoration: none;
-}
-
 .header{
     background-color: #000000;
     border: solid red;
