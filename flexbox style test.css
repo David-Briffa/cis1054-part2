@@ -1,0 +1,35 @@
+body{
+  margin: 20px;
+  background-color: #000000;
+}
+
+.containerMiddle{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: green;
+  justify-content: center;
+}
+
+.sideTxt{
+  display: block;
+  padding: 2%;
+  width: 43%;
+  min-width: 400px;
+  font-weight: bold;
+}
+
+.leftImage{
+  padding: 2%;
+  float: left;
+  width: 45%;
+  height: 35%;
+  min-width: 400px;
+  max-width: 550px;
+}
+
+.divider {
+  background-color: #000000;
+  height: 40px;
+  opacity: 0.4;
+}
