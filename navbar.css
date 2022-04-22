@@ -1,3 +1,9 @@
+/*
+to fix the overlay of fixed navbar set a margin wqual to the height of the navbar
+
+fix it also when viewing from mobile
+*/
+
 .navbar{
     border: solid red;
     display:flex;
@@ -5,6 +11,7 @@
     align-items: center;
     width: 100%;
     overflow: auto;
+    /*position: fixed;*/
 }
 
 .logo{
@@ -14,6 +21,7 @@
     justify-content: center;
     align-items: center;
     padding: .5em;
+    text-align: center;
 }
 
 .img{
@@ -22,14 +30,19 @@
     height: 3.5rem;
 }
 
-.menu{
+.menu ul{
     border: solid rgb(0, 255, 34);
     display: flex;
     list-style: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;;
+    justify-content: space-between;
+    align-items: left;
+    width: auto;
+    list-style-position: outside;
+    padding-right: 38px;
+}
 
+.menu li{
+    padding: 0 1vh;
 }
 
 .navbar a{
@@ -41,7 +54,6 @@
 }
 
 .cta{
-    border: solid red;
     padding: 0.5em;
     display: block;
 }
@@ -51,3 +63,16 @@
     background-color: #5c5b5b;
 }
 
+.bar{
+    width: 100%;
+    background-color: rgb(255, 217, 0);
+    border-radius: 10px;
+    height: 3px;
+}
+
+@media (max-width: 600px){
+    .navbar{
+        flex-direction: column;
+        align-items: center;    
+    }
+}
