@@ -2,7 +2,7 @@ body {
     background-color: #000000;
     color: rgb(255, 187, 0);
     font-family: 'Oswald', 'Bebas Neue', sans-serif, cursive;
-    font-size: 1.4rem;
+    font-size: 2vh;
     font-weight: 500;
     margin: 2%;
 }
@@ -78,13 +78,6 @@ hr {
     background-color: #333333;
 }
 
-/* .bar{
-    width: 100%;
-    background-color: rgb(255, 217, 0);
-    border-radius: 10px;
-    height: 3px;
-} */
-
 .middle{
     background-image: url("./images/background.jpg");
     background-repeat:no-repeat;
@@ -98,7 +91,7 @@ hr {
     border-right: solid rgb(255, 187, 0);
     font-family: 'Source Serif Pro', serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 0.85em;
 }
 
 .border {
@@ -117,7 +110,7 @@ hr {
 }
 
 .container {
-    margin: 2%;
+    margin: 5%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -133,9 +126,10 @@ hr {
 
 .img {
     padding: 3%;
-    width: 50px;
+    width: 10vh;
     min-width: 40vh;
-    max-width: 550px;
+    max-width: 600px;
+    height: auto;
     flex: 1 1 auto;
 }
 

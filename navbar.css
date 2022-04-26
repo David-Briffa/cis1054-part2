@@ -39,6 +39,7 @@ fix it also when viewing from mobile
     width: auto;
     list-style-position: outside;
     padding-right: 38px;
+    flex-shrink: 2;
 }
 
 .menu li{
