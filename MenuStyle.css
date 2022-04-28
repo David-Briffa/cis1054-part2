@@ -3,29 +3,39 @@
     margin:0;
     padding:0;
 }
+
 .divider {
     position: relative;
     border: 3px solid darkgray;
-    background-image: url('https://foodandnutrition.org/wp-content/uploads/herbs-spices-941858854-780x520.jpg');
+    background-image: url('https://wallpaperforu.com/wp-content/uploads/2020/10/food-wallpaper-20100313235930-scaled.jpg');
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     font-family: Palace Script MT;
-    font-size: 6rem;
+    font-size: 6vw;
     max-width:100%;
     max-height:20vh;
     letter-spacing:5px;
     text-align: center;
     font-weight:bold;
-    color:ivory;
+    color:rgb(255, 187, 0);
+    user-select: none;
+}
+.topnav{
+    text-align:right;
+    font-size: 2.7vw;
+
+}
+.divider a{
+    color: rgb(255, 187, 0);
 }
 .container {
     background-image: url('https://www.templestowehotel.com.au/wp-content/uploads/2016/12/Blackboard-bg.jpg');
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
-    color:white;
+    color:ivory;
     font-size: 1.5rem;
     text-align: center;
     font-family: Felix Titling;
@@ -55,14 +65,15 @@
     font-family: Palace Script MT;
     letter-spacing:5px;
     text-align: center;
-    color: white;
+    color: ivory;
+    user-select: none;
 }
 .principal h1{
-    font-size:10rem;
+    font-size:13vw;
     margin-bottom:0.5rem;
 }
 .principal p{
-    font-size:5rem;
+    font-size:5.5vw;
 }
 @keyframes slide {
     0% {
@@ -96,6 +107,16 @@ background-image: url('https://live.staticflickr.com/65535/52004636225_868b1a653
 background-image: url('https://live.staticflickr.com/65535/52004636210_da359eecd4_b.jpg');
     }
 }
+.menu {
+    font-family: Baskerville Old Face;
+    font-size: 1.5rem; 
+    user-select: none;
+}
+.description {
+    font-style: italic;
+    font-size: 1.2rem;
+    user-select: none;
+}
 .form {
     display:flex;
     justify-content: center;
@@ -110,9 +131,28 @@ background-image: url('https://live.staticflickr.com/65535/52004636210_da359eecd
     border: 2px solid black;
 } 
 .button:hover {
-    background-color: rgb(145, 0, 0);
+    background-color: white;
 }
 .favbutton {
     font-size: 1rem;
-    padding: 2px;
+    padding: 1.5px;
+    background-color: ivory;
+    border-radius: 10px;
+    transition-duration: 0.4s;
 }
+.favbutton:hover {
+    background-color: rgb(173, 24, 24);
+}
+.details {
+    font-size: 1rem;
+    padding: 1.5px;
+    background-color: ivory;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.details:hover {
+    background-color: rgb(255, 187, 0);
+}
+
+
