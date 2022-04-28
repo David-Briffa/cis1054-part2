@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="MenuStyle.css">
 </head>
 <body>
+    <div class="divider">
+        <div class="topnav">
+            <a class="links" href="#home">Home</a>
+            <a href="index.php">Menu</a>
+            <a href="favourites">Favourites</a>
+            <a href="contact">Contact Us</a>
+        </div>
+    </div>
     <div class="slider">
         <div class="load"> 
         </div>
@@ -30,8 +38,11 @@
             echo "<div class='container'>";
             while($row = mysqli_fetch_assoc($menuresults)){
                 echo "<div class='menu'>";
-                echo $row['Name']." ";
-                echo $row['Price']."€";
+                    echo $row['Name']." ";
+                    echo $row['Price']."€" . " ";
+                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
+                    echo "</form>";        
                 echo "</div>";
             }
             echo "</div>";
@@ -48,8 +59,11 @@
             echo "<div class='container'>";
             while($row = mysqli_fetch_assoc($menuresults)){
                 echo "<div class='menu'>";
-                echo $row['Name']." ";
-                echo $row['Price']."€";
+                    echo $row['Name']." ";
+                    echo $row['Price']."€" . " ";
+                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
+                    echo "</form>";                
                 echo "</div>";
             }
             echo "</div>";
@@ -66,8 +80,11 @@
             echo "<div class='container'>";
             while($row = mysqli_fetch_assoc($menuresults)){
                 echo "<div class='menu'>";
-                echo $row['Name']." ";
-                echo $row['Price']."€";
+                    echo $row['Name']." ";
+                    echo $row['Price']."€" . " ";
+                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
+                    echo "</form>";
                 echo "</div>";
             }
             echo "</div>";
@@ -84,16 +101,16 @@
             echo "<div class='container'>";
             while($row = mysqli_fetch_assoc($menuresults)){
                 echo "<div class='menu'>";
-                echo $row['Name']." ";
-                echo $row['Price']."€";
+                    echo $row['Name']." ";
+                    echo $row['Price']."€" . " ";
+                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
+                    echo "</form>";
                 echo "</div>";
             }
             echo "</div>";
         }
     ?>
-    <div class="divider">
-    <form action="index2.php" method="post" class="form">
-    <input type="submit" name="goToDescriptions" value="Detailed Descriptions" class="button"/>
-    </div>
+
 </body>
 </html>
