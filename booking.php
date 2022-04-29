@@ -1,3 +1,7 @@
+<?php
+include_once "connectDB.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,28 +20,7 @@
   </head>
 
   <body>
-    <div class="header border">
-      <nav class="navbar">
-        <a href="index.html">
-          <div class="logo">
-            <img class="imgNav" src="./images/logo2.jpg" alt="LOGO" />
-            <p class="logoText">Restaurant Name</p>
-          </div>
-        </a>
-
-        <div class="menu">
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Favorites</a></li>
-          </ul>
-        </div>
-
-        <div class="cta">
-          <a href="./booking.html">Book now!</a>
-        </div>
-      </nav>
-    </div>
+  <?php include "header.html"?>
 
     <div class="middle">
       <div class="divider"></div>
@@ -48,7 +31,7 @@
         <div class="img"></div>
         <div class="content">
           <h3>Reservation</h3>
-          <form class="formRow" action="" method="get">
+          <form class="formRow" action="" method="post">
             <input
               type="date"
               name="date"
@@ -65,7 +48,7 @@
             />
           </form>
 
-          <form class="formRow" action="" method="get">
+          <form class="formRow" action="" method="post">
             <input type="text" name="name" placeholder="Full Name" required />
             <input
               type="tel"
@@ -75,7 +58,7 @@
             />
           </form>
 
-          <form class="formRow" action="" method="get">
+          <form class="formRow" action="" method="post">
             <input
               type="email"
               name="email"
@@ -101,34 +84,6 @@
       <div class="divider"></div>
     </div>
 
-    <div class="footer border">
-      <div class="Opening_hours footerText">
-        <h2>Opening hours</h2>
-        <p>MON - FRI: 17:30 - 22:30</p>
-        <p>SUN: 12:00 - 15:30</p>
-      </div>
-
-      <div class="Contact_details footerText">
-        <h2>Contact details</h2>
-        <p>Address: 45 Triq Hal-Gharghur, San Ġwann</p>
-        <p>Telephone number: +356 999999999</p>
-        <p>Email address: sampleemail@gmail.com</p>
-      </div>
-
-      <div class="Location footerText">
-        <h2>Location</h2>
-        <map class="map" name="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1615.7592403116178!2d14.461759976073377!3d35.90980716744374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x599f84b355ec0d56!2zMzXCsDU0JzM1LjMiTiAxNMKwMjcnNDYuMyJF!5e0!3m2!1sen!2smt!4v1650898665029!5m2!1sen!2smt"
-            width="300vh"
-            height="200vh"
-            style="border: 0"
-            allowfullscreen="y"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </map>
-      </div>
-    </div>
+    <?php include "footer.html"?>
   </body>
 </html>

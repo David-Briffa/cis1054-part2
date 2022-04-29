@@ -2,18 +2,9 @@ body {
     background-color: #000000;
     color: rgb(255, 187, 0);
     font-family: 'Oswald', 'Bebas Neue', sans-serif, cursive;
-    font-size: 2vh;
+    font-size: 1.4rem;
     font-weight: 500;
     margin: 2%;
-}
-
-hr {
-    border-top: 3.5px solid rgb(255, 187, 0);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 .navbar{
@@ -40,6 +31,7 @@ hr {
 .imgNav{
     width: 5rem;
     height: 5rem;
+    padding-left: 1vh;
 }
 
 .menu ul{
