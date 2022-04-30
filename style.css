@@ -1,175 +1,107 @@
 body {
-    background-color: #000000;
-    color: rgb(255, 187, 0);
-    font-family: 'Oswald', 'Bebas Neue', sans-serif, cursive;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 2%;
+  background-color: #000000;
+  color: rgb(255, 187, 0);
+  font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1.5%;
 }
 
-.navbar{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-size: 1.2em;
-}
-
-.logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0em 2vh;
-    text-align: center;
-}
-
-.logoText{
-    padding-left: 1vh;
-}
-
-.imgNav{
-    width: 5rem;
-    height: 5rem;
-    padding-left: 1vh;
-}
-
-.menu ul{
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: left;
-    width: auto;
-    list-style-position: outside;
-    padding-right: 3em;
-}
-
-.menu li{
-    padding: 0 1vh;
-}
-
-.navbar a{
-    text-decoration: none;
-    padding: 1em;
-    display: block;
-    color: inherit;
-}
-
-.cta{
-    padding: 0.5em;
-    display: block;
-}
-
-.menu a:hover{
-    cursor: pointer;
-    background-color: #333333;
-}
-
-.cta:hover{
-    cursor: pointer;
-    background-color: #333333;
-}
-
-.middle{
-    background-image: url("./images/background.jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-width: 3.5px;
-    border-style: outset;
-    border-top: none;
-    border-bottom: none;
-    border-left: solid rgb(255, 187, 0);
-    border-right: solid rgb(255, 187, 0);
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
-    font-size: 0.85em;
+.middle {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff1%2Fd9%2F29%2Ff1d929097951ed74261dd6c25330d1ad.jpg&f=1&nofb=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-width: 3.5px;
+  border-style: outset;
+  border-top: none;
+  border-bottom: none;
+  border-left: solid rgb(255, 187, 0);
+  border-right: solid rgb(255, 187, 0);
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 0.85em;
 }
 
 .border {
-    border: solid rgb(255, 187, 0);
-    border-width: 3.5px;
-    border-style: outset;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+  border: solid rgb(255, 187, 0);
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
-.blackBorder{
-    border: solid #000000;
+.blackBorder {
+  border: solid #000000;
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .container {
-    margin: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: rgba(255, 187, 0, 0.75);
-    justify-content: center;
-    align-content: center;
-
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: rgba(255, 187, 0, 0.75);
+  justify-content: center;
+  align-content: center;
 }
 
 .wrapReverse {
-    flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 .img {
-    padding: 3%;
-    width: 10vh;
-    min-width: 40vh;
-    max-width: 600px;
-    height: auto;
-    flex: 1 1 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  margin: 3%;
+  width: 10vh;
+  height: auto;
+  min-width: 40vh;
+  max-width: 600px;
+  min-height: 350px;
+  flex: 1 1 auto;
+}
+
+.kitchenImg{
+  background-image: url("https://cuisine-test.com/wp-content/uploads/2020/08/Organisation-en-cuisine-930x620.jpg");
+}
+
+.takeawayImg{
+  background-image: url("https://d2yvmenv39glx3.cloudfront.net/images/f-72258-jedzenie-na-wynos-swietne-rozwiazanie-w-dobie-pandemii.jpg");
+}
+
+.takeOrderImg{
+  background-image: url("https://thumbs.dreamstime.com/b/contemporary-clerk-notepaper-pencil-waiting-guests-restaurant-welcome-to-our-restaurant-101323767.jpg");
+}
+
+.barImg{
+  background-image: url("https://thumbs.dreamstime.com/b/woman-bartender-medical-mask-mixes-green-drink-glass-using-spoon-woman-bartender-medical-mask-mixes-green-drink-glass-176298467.jpg");
+}
+
+.tableImg{
+  background-image: url("https://i.pinimg.com/736x/30/e1/f5/30e1f5717621b9c3792488a373329687.jpg");
 }
 
 .sideTxt {
-    display: inline-block;
-    padding: 3%;
-    max-width: 800px;
-    flex: 1 1 auto;
-    color: #000000;
+  display: inline-block;
+  padding: 3%;
+  max-width: 800px;
+  flex: 1 1 auto;
+  color: #000000;
 }
-
 
 .divider {
-    height: 70px;
-    opacity: 0;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-right: 5%;
-    padding-left: 5%;
-}
-
-.footerText {
-    text-align: center;
-    display: block;
-    font-size: 0.8em;
-    font-weight: 300;
-    padding-right: 4%;
-    padding-left: 4%;
-}
-
-@media (max-width: 60em){
-    .navbar{
-        flex-direction: column;
-        align-items: center;
-        justify-content:flex-start;  
-    }
-
-    .navbar div{
-        padding: 0 1vh;
-    }
-
-    .footer{
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+  height: 40px;
+  opacity: 0;
 }

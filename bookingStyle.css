@@ -7,71 +7,6 @@ body {
   margin: 2%;
 }
 
-/*NAVIGATION BAR*/
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-size: 1.2em;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0em 2vh;
-  text-align: center;
-}
-
-.logoText {
-  padding-left: 1vh;
-}
-
-.imgNav {
-  width: 5rem;
-  height: 5rem;
-  padding-left: 1vh;
-}
-
-
-.menu ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: left;
-    width: auto;
-    list-style-position: outside;
-    padding-right: 3em;
-}
-
-.menu li {
-  padding: 0 1vh;
-}
-
-.navbar a {
-  text-decoration: none;
-  padding: 1em;
-  display: block;
-  color: inherit;
-}
-
-.cta {
-  padding: 0.5em;
-  display: block;
-}
-
-.menu a:hover {
-  cursor: pointer;
-  background-color: #333333;
-}
-
-.cta:hover {
-  cursor: pointer;
-  background-color: #333333;
-}
-
 /*CONTENT*/
 .middle {
   font-family: "Times New Roman", Times, serif;
@@ -83,7 +18,7 @@ body {
   border-bottom: none;
   border-left: solid rgb(255, 187, 0);
   border-right: solid rgb(255, 187, 0);
-  background-image: url("./images/background.jpg");
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff1%2Fd9%2F29%2Ff1d929097951ed74261dd6c25330d1ad.jpg&f=1&nofb=1");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -107,6 +42,13 @@ body {
 
 .blackBorder {
   border: solid #000000;
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .divider {
@@ -137,7 +79,7 @@ body {
 }
 
 .img {
-  background-image: url(./images/table.jpg);
+  background-image: url("https://st2.depositphotos.com/1044234/5212/i/950/depositphotos_52128155-stock-photo-table-setting-for-celebration.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -185,41 +127,4 @@ body {
 
 .formRow input[type="submit"]:hover {
   background-color: #333333;
-}
-
-/*FOOTER*/
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-right: 5%;
-  padding-left: 5%;
-}
-
-.footerText {
-  text-align: center;
-  display: block;
-  font-size: 0.8em;
-  font-weight: 300;
-  padding-right: 4%;
-  padding-left: 4%;
-}
-
-/*MOBILE CHANGES*/
-@media (max-width: 60em) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .navbar div {
-    padding: 0 1vh;
-  }
-
-  .footer {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
