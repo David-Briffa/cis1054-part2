@@ -35,15 +35,14 @@ body {
   padding-left: 1vh;
 }
 
-
 .menu ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: left;
-    width: auto;
-    list-style-position: outside;
-    padding-right: 3em;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: left;
+  width: auto;
+  list-style-position: outside;
+  padding-right: 3em;
 }
 
 .menu li {
@@ -137,7 +136,7 @@ body {
 }
 
 .img {
-  background-image: url(./images/table.jpg);
+  background-image: url(./images/tableLow.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

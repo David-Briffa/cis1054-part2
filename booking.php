@@ -9,6 +9,7 @@ include_once "connectDB.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="bookingStyle.css" />
+    <link rel="stylesheet" href=".\heFoStyle.css" />
     <link rel="script" src="main.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
