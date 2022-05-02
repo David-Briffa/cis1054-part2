@@ -133,11 +133,14 @@ background-image: url('https://live.staticflickr.com/65535/52004636210_da359eecd
 .button:hover {
     background-color: white;
 }
+.favourite{
+    font-size:2rem;
+}
 .favbutton {
-    font-size: 1rem;
+    font-size: 3.5rem;
     padding: 1.5px;
     background-color: ivory;
-    border-radius: 10px;
+    border-radius: 40px;
     transition-duration: 0.4s;
 }
 .favbutton:hover {
@@ -152,7 +155,7 @@ background-image: url('https://live.staticflickr.com/65535/52004636210_da359eecd
 }
 
 .details:hover {
-    background-color: rgb(255, 187, 0);
+    background-color: rgb(255, 188, 0);
 }
 
 
