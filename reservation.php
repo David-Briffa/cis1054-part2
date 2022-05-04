@@ -43,7 +43,7 @@
         }
 
 
-         /*
+        /*
          $sql = "INSERT INTO reservations (res_date, res_time, res_name, res_number, res_email, res_people)
                  VALUES ('{$date}', '{$time}', '{$name}', '{$number}', '{$email}', {$people});
                  ";
@@ -51,14 +51,18 @@
          $connect->query($sql);
          */
 
+
+        //To improve security and prevent any type of SQL injection (examples of SQL injections inputs: "intended value OR 1=1", "'); AND DROP TABLE --" ).
+
+
         $sql = "INSERT INTO reservations (res_date, res_time, res_name, res_number, res_email, res_people)
-             VALUES (?, ?, ?, ?, ?, ?);
-             ";
-        $params = [$date, $time, $name, $number, $email, $people];
+             VALUES (?, ?, ?, ?, ?, ?); 
+             "; //creating template for SQL statement using '?' as placeholders
+        $params = [$date, $time, $name, $number, $email, $people]; //array of parameters that will take the place of said placeholders
 
-        $stmt = $connect->prepare($sql);
+        $stmt = $connect->prepare($sql); //preparation of statement using template ($sql)
 
-        $stmt->bind_param("sssssi", ...$params);
+        $stmt->bind_param("sssssi", ...$params); //binding of statement (i.e. substituting parameters inside the bound statement)
         $stmt->execute();
     }
     ?>
