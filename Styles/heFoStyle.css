@@ -9,6 +9,10 @@
   -o-border-radius: 4px;
 }
 
+.blackBorder {
+  border: solid #000000;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -22,7 +26,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0em 2vh;
+  padding: 0em 0vh;
   text-align: center;
 }
 
@@ -31,9 +35,14 @@
 }
 
 .imgNav {
+  background-image: url("https://live.staticflickr.com/65535/52048454364_90053642e8.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
   width: 5rem;
   height: 5rem;
-  padding-left: 1vh;
+  /* padding-left: 1vh; */
 }
 
 .menu ul {
@@ -43,7 +52,6 @@
   align-items: left;
   width: auto;
   list-style-position: outside;
-  padding-right: 3em;
 }
 
 .menu li {
@@ -52,7 +60,7 @@
 
 .navbar a {
   text-decoration: none;
-  padding: 1em;
+  padding: 1vh;
   display: block;
   color: inherit;
 }

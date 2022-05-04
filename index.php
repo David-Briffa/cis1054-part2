@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".\style.css" />
-    <link rel="stylesheet" href=".\heFoStyle.css" />
+    <link rel="stylesheet" href="./Styles/style.css" />
     <link rel="script" src="main.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,26 +25,28 @@
             <div class="img takeOrderImg"></div>
             <div class="img takeawayImg"></div>
             <span class="sideTxt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                totam, tenetur eaque magnam corrupti cumque reiciendis dolores
-                delectus temporibus aperiam quibusdam veniam sunt soluta cum iste
-                fugiat nisi sit aliquid
+                Come visit us and have a tasty meal and a wonderful time. We offer both dine in service and takeaway,
+                and as such, we
+                highly recommend booking a table by clicking on the appropriate button on the top right.
             </span>
         </div>
 
         <div class="container wrapReverse blackBorder">
             <span class="sideTxt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                totam, tenetur eaque magnam corrupti cumque reiciendis dolores
-                delectus temporibus aperiam quibusdam veniam sunt soluta cum iste
-                fugiat nisi sit aliquid, neque mollitia veritatis sed! Maiores nostrum
-                magni, non eligendi delectus deserunt dicta natus veritatis officia
-                voluptatum. Delectus earum obcaecati quidem explicabo fugit cupiditate
-                minima veniam ab dolor, nostrum odit excepturi, voluptatum, repellat
-                libero illo tempora aspernatur totam. Provident veniam officiis quo
-                doloremque quasi repellendus corrupti eius maiores exercitationem ab
-                est cum possimus nostrum nam illum ullam nesciunt, sunt commodi iure,
-                distinctio dolor quae nobis. Dicta, sequi quo? Odio, voluptatum quia!
+                "Restaurant name"
+                was established by our founder
+
+                in 1964 and
+                has
+                been proudly
+                serving our customers ever since. Our objective was to always provide our clients with the best
+                quality ingredients without compromise, lovingly prepared and transformed by our chefs into the
+                dishes you know and love. We specialize in Mediter
+                ranean cuisine, and as such, we share strong
+                bonds with the local farmers, who provide us only with the freshest local ingredients. As such,
+                our
+                menu changes in accordance with the seasons.
+
             </span>
             <div class="img kitchenImg"></div>
         </div>
@@ -53,17 +54,10 @@
         <div class="container blackBorder">
             <div class="img barImg"></div>
             <span class="sideTxt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                totam, tenetur eaque magnm corrupti e reiciendis dolores
-                delectus temporibus aperiam quibusdam veniam sunt soluta cum iste
-                fugiat nisi sit aliquid, neque mollitia veritatis sed! Maiores nostrum
-                magni, non eligendi delectus deserunt dicta natus veritatis officia
-                voluptatum. Delectus earum obcaecati quidem explicabo fugit cupiditate
-                minima veniam ab dolor, nostrum odit excepturi, voluptatum, repellat
-                libero illo tempora aspernatur totam. Provident veniam officiis quo
-                doloremque quasi repellendus corrupti eius maiores exercitationem ab
-                est cum possimus nostrum nam illum ullam nesciunt, sunt commodi iure,
-                distinctio dolor quae nobis. Dicta, sequi quo? Odio, voluptatum quia!
+                If you are not in the mood for a meal we also have a dedicated bar area where you can be served
+                traditional cocktails as well as some specialties of our restaurant. All our drinks and food are
+                prepared and served by
+                certificated barmen/women and food handlers.
             </span>
         </div>
 
