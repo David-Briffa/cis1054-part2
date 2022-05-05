@@ -4,7 +4,7 @@ $dbServername = "localhost";
 $dbUsername = "root"; 
 $dbPassword = "password123";
 $dbName = "menu";
-$table = "images";
+$table = "reservations";
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 if(!$conn) {
