@@ -1,4 +1,8 @@
 <!--- This php file generates the menu items from the database and displays them --->
+<?php
+require_once 'db-inc.php'; 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="MenuStyle.css">
+    <link rel="stylesheet" href="Styles/MenuStyle.css">
 </head>
 <body>
-    <div class="divider">
-        <div class="topnav">
-            <a class="links" href="#home">Home</a>
-            <a href="index.php">Menu</a>
-            <a href="favourites">Favourites</a>
-            <a href="contact">Contact Us</a>
-        </div>
-    </div>
+<?php include "header.html" ?>
     <div class="slider">
         <div class="load"> 
         </div>
@@ -40,7 +37,7 @@
                 echo "<div class='menu'>";
                     echo $row['Name']." ";
                     echo $row['Price']."€" . " ";
-                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<form action='menu_descriptions.php?pid=". $row['ID'] . "' method='post' class='form'>";
                     echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
                     echo "</form>";        
                 echo "</div>";
@@ -61,7 +58,7 @@
                 echo "<div class='menu'>";
                     echo $row['Name']." ";
                     echo $row['Price']."€" . " ";
-                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<form action='menu_descriptions.php?pid=". $row['ID'] . "' method='post' class='form'>";
                     echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
                     echo "</form>";                
                 echo "</div>";
@@ -82,7 +79,7 @@
                 echo "<div class='menu'>";
                     echo $row['Name']." ";
                     echo $row['Price']."€" . " ";
-                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<form action='menu_descriptions.php?pid=". $row['ID'] . "' method='post' class='form'>";
                     echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
                     echo "</form>";
                 echo "</div>";
@@ -103,7 +100,7 @@
                 echo "<div class='menu'>";
                     echo $row['Name']." ";
                     echo $row['Price']."€" . " ";
-                    echo "<form action='index4.php?pid=". $row['ID'] . "' method='post' class='form'>";
+                    echo "<form action='menu_descriptions.php?pid=". $row['ID'] . "' method='post' class='form'>";
                     echo "<input type='submit' name='details' class='details' value='Details' />" . "<br>";
                     echo "</form>";
                 echo "</div>";
@@ -111,6 +108,6 @@
             echo "</div>";
         }
     ?>
-
+<?php include "footer.html" ?>
 </body>
 </html>
