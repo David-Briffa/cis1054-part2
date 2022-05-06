@@ -73,27 +73,27 @@ body {
   flex: 1 1 auto;
 }
 
-.kitchenImg{
+.kitchenImg {
   background-image: url("https://live.staticflickr.com/65535/52047169527_880c5f95b5_z.jpg");
 }
 
-.takeawayImg{
+.takeawayImg {
   background-image: url("https://live.staticflickr.com/65535/52047169612_d1d3e938ed_z.jpg");
 }
 
-.takeOrderImg{
+.takeOrderImg {
   background-image: url("https://live.staticflickr.com/65535/52048458689_fa83e1fe64_z.jpg");
 }
 
-.barImg{
+.barImg {
   background-image: url("https://live.staticflickr.com/65535/52048720495_8d27775822_z.jpg");
 }
 
-.tableImg{
+.tableImg {
   background-image: url("https://live.staticflickr.com/65535/52048218011_a8615eb955_b.jpg");
 }
 
-.openingImg{
+.openingImg {
   background-image: url("https://live.staticflickr.com/65535/52047169517_a8bf76153f_z.jpg");
 }
 
@@ -101,10 +101,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 3%;
   max-width: 800px;
   flex: 1 1 auto;
   color: #000000;
+}
+
+.container a {
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 175, 0);
+  margin: 0.5vh;
+  padding: 1.5vh;
+  max-width: 100px;
+  min-width: 40px;
+  background-color: #000000;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.container a:hover {
+  cursor: pointer;
+  background-color: #202020;
 }
 
 .divider {

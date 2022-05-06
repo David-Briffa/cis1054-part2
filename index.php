@@ -34,7 +34,7 @@
 
         <div class="container wrapReverse blackBorder">
             <span class="sideTxt">
-                "Restaurant name"
+                SupperThyme
                 was established by our founder
 
                 in 1964 and
