@@ -1,0 +1,136 @@
+body {
+  background-color: #000000;
+  color: rgb(255, 187, 0);
+  font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1.5%;
+}
+
+.middle {
+  background-image: url("https://live.staticflickr.com/65535/52048262013_96243c4522_h.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-width: 3.5px;
+  border-style: outset;
+  border-top: none;
+  border-bottom: none;
+  border-left: solid rgb(255, 187, 0);
+  border-right: solid rgb(255, 187, 0);
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.border {
+  border: solid rgb(255, 187, 0);
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.blackBorder {
+  border: solid #000000;
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.container {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: rgba(255, 187, 0, 0.75);
+  justify-content: center;
+  align-content: center;
+}
+
+.wrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  margin: 3%;
+  width: 10vh;
+  height: auto;
+  min-width: 40vh;
+  max-width: 600px;
+  min-height: 350px;
+  flex: 1 1 auto;
+}
+
+.kitchenImg {
+  background-image: url("https://live.staticflickr.com/65535/52047169527_880c5f95b5_z.jpg");
+}
+
+.takeawayImg {
+  background-image: url("https://live.staticflickr.com/65535/52047169612_d1d3e938ed_z.jpg");
+}
+
+.takeOrderImg {
+  background-image: url("https://live.staticflickr.com/65535/52048458689_fa83e1fe64_z.jpg");
+}
+
+.barImg {
+  background-image: url("https://live.staticflickr.com/65535/52048720495_8d27775822_z.jpg");
+}
+
+.tableImg {
+  background-image: url("https://live.staticflickr.com/65535/52048218011_a8615eb955_b.jpg");
+}
+
+.openingImg {
+  background-image: url("https://live.staticflickr.com/65535/52047169517_a8bf76153f_z.jpg");
+}
+
+.sideTxt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3%;
+  max-width: 800px;
+  flex: 1 1 auto;
+  color: #000000;
+}
+
+.container a {
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  color: rgb(255, 175, 0);
+  margin: 0.5vh;
+  padding: 1.5vh;
+  max-width: 100px;
+  min-width: 40px;
+  background-color: #000000;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.container a:hover {
+  cursor: pointer;
+  background-color: #202020;
+}
+
+.divider {
+  height: 40px;
+  opacity: 0;
+}
