@@ -1,6 +1,7 @@
 CIS1054-CourseWork-Part2
 
-A private GitHub repository is required for Part 2 (named “cis1054-part2”). Please also include chrisporter-um along with your team members as collaborators. It doesn’t matter who creates the repository, as long as all team members are added as Collaborators. Based on the principles and best practices discussed throughout this course, you are asked to build a dynamic website for a restaurant of choice. This website should provide:
+A private GitHub repository is required for Part 2 (named “cis1054-part2”). Please also include chrisporter-um along with your team members as collaborators. It doesn’t matter who creates the repository, as long as all team members are added as Collaborators.
+Based on the principles and best practices discussed throughout this course, you are asked to build a dynamic website for a restaurant of choice. This website should provide:
 
 a) generic information about the restaurant (including address and opening hours),
 
