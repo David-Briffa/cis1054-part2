@@ -78,7 +78,7 @@ require_once 'db-inc.php';
 
     ?>
     <div class="divider">
-        Restaurant
+        SupperThyme
     </div>
     <?php include "footer.html" ?>
 
