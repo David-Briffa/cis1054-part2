@@ -42,25 +42,27 @@ function removeFavourite(){
 
         if($resultCheck > 0){
             while($row = mysqli_fetch_assoc($queryResult)){
-            echo "<div class='container'>";
-                echo "<div class='menu'><br><br>";
+                ?>
+            <div class='container'>
+                <div class='menu'><br><br>
+                <?php
                     echo $row['Name']." ";
-                    echo $row['Price']."€". "<br>";
-                        echo "<div class='description'>";
-                            echo $row['Description'];
-                            echo $row['ID'] . "<br><br>";
-                            echo "<div class='favourite'>" . "<br><br>";
-                                echo "Remove dish from favourites! &#8594;";
-                                echo "<form method='post'>";
-                                    echo "<input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' />" . "<br><br>";
-                                echo " </form>";
-                            echo "</div>";
-                        echo "</div>";
-                echo "</div>";
+                    echo $row['Price']."€". "<br>"; ?>
+                        <div class='description'>
+                            <?php echo $row['Description']; ?>                                                                                                               
+                            <br><br><div class='favourite'><br><br>
+                                Remove dish from favourites! &#8594;
+                                <form method='post'>
+                                    <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' /><br><br>
+                                </form>
+                            </div>
+                        </div>
+                </div>
+      <?php  } ?>
+            </div>
+      <?php                      
         }
-            echo "</div>";
-    }
-} 
+    } 
 }
 ?>
 <?php include "footer.html" ?>

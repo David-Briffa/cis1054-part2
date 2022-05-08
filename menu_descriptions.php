@@ -26,16 +26,14 @@ function setFavourite(){
         $favArray = array();
         $_SESSION["favourite"] = $favArray;
     }
-    else{
-    array_push($_SESSION["favourite"], $favID);
-    
-    echo "<div class='container'>";
-        echo "favourite dish has been set<br>";
-    echo "</div>";
+    else{   array_push($_SESSION["favourite"], $favID);   ?>
+
+    <div class='container'>
+        favourite dish has been set<br>
+    </div>
+    <?php
     }
 }
-
-
     if(isset($_GET['pid'])) { 
         $pid = $_GET['pid'];
         $sqlquery = "SELECT * FROM menu.menuitems WHERE ID = $pid;";
@@ -43,33 +41,32 @@ function setFavourite(){
         $resultCheck = mysqli_num_rows($queryResult);
 
         if($resultCheck > 0){
-            echo "<div class='container'>";
-            while($row = mysqli_fetch_assoc($queryResult)){
-                echo "<div class='menu'><br><br>";
+        ?>
+            <div class='container'>
+                <?php while($row = mysqli_fetch_assoc($queryResult)){ ?>
+                <div class='menu'><br><br>
+                <?php
                     echo $row['Name']." ";
-                    echo $row['Price']."€". "<br>";
-                        echo "<div class='description'>";
-                            echo $row['Description'] . "<br>";
-                            echo "<div class='favourite'><br><br>";
-                                echo "Like this dish? Favourite it! &#8594;";
-                                echo "<form method='post'>";
-                                    echo "<input type='submit' name='setFavourite' class='favbutton' value=' &hearts; ' />" . "<br><br>";
-                                echo "</form>";                             
-                                echo "<form action='favourites.php' method='post'>";
-                                    echo "<br><input type='submit' name='goToFavourites' class='favbutton' value='Go to favourites' />";
-                                echo " </form>";
-                            echo "</div>";
-                        echo "</div>";
-                echo "</div>";
+                    echo $row['Price'] ?> € <br>                   
+                        <div class='description'>
+                            <?php
+                            echo $row['Description']?> <br>
+                            <div class='favourite'><br><br>
+                                Like this dish? Favourite it! &#8594;
+                                <form method='post'>
+                                    <input type='submit' name='setFavourite' class='favbutton' value=' &hearts; ' /><br><br>
+                                </form>                          
+                                <form action='favourites.php' method='post'>
+                                    <br><input type='submit' name='goToFavourites' class='favbutton' value='Go to favourites' />
+                                </form>
+                            </div>
+                        </div>
+               </div>
+               <?php } ?>
+            </div>
+            <?php
         }
-            echo "</div>";
     }
-    
-
-}
-
-
-
 ?>
 <div class="divider">
     Restaurant
