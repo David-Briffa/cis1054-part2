@@ -29,7 +29,6 @@ require 'session.php';
 }
 
 function removeFavourite(){
-
     unset($_SESSION["favourite"]);
 }
 
