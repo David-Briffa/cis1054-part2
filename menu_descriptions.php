@@ -41,30 +41,28 @@ function setFavourite(){
         $sqlquery = "SELECT * FROM menu.menuitems WHERE ID = $pid;";
         $queryResult = mysqli_query($conn, $sqlquery);
         $resultCheck = mysqli_num_rows($queryResult);
+
         if($resultCheck > 0){
             echo "<div class='container'>";
             while($row = mysqli_fetch_assoc($queryResult)){
-                echo "<div class='menu'><br>";
-                echo "<br><br>";
+                echo "<div class='menu'><br><br>";
                     echo $row['Name']." ";
                     echo $row['Price']."€". "<br>";
                         echo "<div class='description'>";
                             echo $row['Description'] . "<br>";
-                            echo "<div class='favourite'>";
-                                echo "<br><br>";
+                            echo "<div class='favourite'><br><br>";
                                 echo "Like this dish? Favourite it! &#8594;";
                                 echo "<form method='post'>";
                                     echo "<input type='submit' name='setFavourite' class='favbutton' value=' &hearts; ' />" . "<br><br>";
-                                echo " </form>";
-                                echo "<br><br>";
+                                echo "</form>";                             
                                 echo "<form action='favourites.php' method='post'>";
-                                    echo "<input type='submit' name='goToFavourites' class='favbutton' value='Go to favourites' />";
+                                    echo "<br><input type='submit' name='goToFavourites' class='favbutton' value='Go to favourites' />";
                                 echo " </form>";
                             echo "</div>";
                         echo "</div>";
                 echo "</div>";
         }
-        echo "</div>";
+            echo "</div>";
     }
     
 
