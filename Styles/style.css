@@ -351,6 +351,15 @@ background-image: url('https://live.staticflickr.com/65535/52004636210_da359eecd
     justify-content: center;
     align-content: center;
   }
+  .containerDishes{
+    font-family: Palace Script MT;
+    font-size: 4vw;
+    margin: 1%;
+    padding: 0.5%;
+    color:black;
+    background-color: rgba(255, 187, 0, 0.75);
+    text-align: center;
+  }
   
   .wrapReverse {
     flex-wrap: wrap-reverse;
