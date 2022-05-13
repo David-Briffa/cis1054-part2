@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{ menuitems.Type }}</h1>
+    <h1>{{ menuitems.Name }}</h1>
+    <p>{{ menuitems.Description }}</p>
+    <p>{{ menuitems.Price }}</p>
+</div>
+    <br/>
+
+        Remove dish from favourites! &#8594;
+        <form method='post'>
+            <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' /><br><br>
+        </form>
+
+
+
+{% endblock %}

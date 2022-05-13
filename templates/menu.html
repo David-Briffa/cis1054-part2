@@ -1,13 +1,13 @@
-<ul class="menu">
-    <li><a href="index.php">Home</a></li>
-    <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Types</a>
-        <div class="dropdown-content">
-            <a href="index.php">All</a>
-            {% for type in animalTypes %}
-                <a href="index.php?type={{ type.id }}">{{ type.name }}</a>
-            {% endfor %}
-        </div>
-    </li>
-    <li><a href="about.php">About</a></li>
-</ul>
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Menu</h1>
+    <p>Supperthyme</p>
+    {% for menuitem in menuitems %}
+            <div class="container">
+                <h4><b>{{ menuitem.name }}</b></h4> 
+                <p>{{ menuitem.Price }}</p> 
+                <p><a href="menu_details.php?pid={{ menuitem.ID }}">Details about {{ menuitem.name }}</a></p>
+            </div>
+        <br/>
+    {% endfor %}
+{% endblock %}
