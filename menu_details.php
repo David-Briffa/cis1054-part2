@@ -5,6 +5,14 @@ require_once __DIR__.'/db-inc.php';
 require_once __DIR__.'/session.php';
 
 $favID = $_GET['pid'];
+if(array_key_exists('goToFavourites', $_POST)) {
+    goToFavourites();
+}
+function goToFavourites() {
+    
+}
+
+
 
 if(array_key_exists('setFavourite', $_POST)) {
     setFavourite();

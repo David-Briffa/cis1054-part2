@@ -34,7 +34,7 @@ if(isset($_SESSION["favourite"])){
 echo $twig->render('404.html');
     
 }else
-echo $twig->render('404.html');
+echo  $twig->render('noFavourites.html');
 
 
 
