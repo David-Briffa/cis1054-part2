@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'menu.html' with {'animalTypes': animalTypes} %}
+{% endblock %}
+
+{% block content %}
+    <h1>Latest pets</h1>
+    <p>Ready for a forever home</p>
+
+    {% for animal in animals %}
+        <div class="card">
+            <img src="{{ animal.image }}" alt="{{ animal.name }}" style="width:100%">
+            <div class="container">
+                <h4><b>{{ animal.name }}</b></h4> 
+                <p>{{ animal.bio }}</p> 
+                <p><a href="details.php?a={{ animal.id }}">Details about {{ animal.name }}</a></p>
+            </div>
+        </div>
+        <br/>
+    {% endfor %}
+{% endblock %}

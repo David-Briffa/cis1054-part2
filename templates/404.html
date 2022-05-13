@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Woops! Can't find your friend?</h1>
+    <p>This is embarassing! Or is it? Why don't you let us know what you need ...</p>
+    <form action="" method="POST">
+        <input type="email" name="email" placeholder="Your email" required />
+        <input type="tel" name="phone" placeholder="Your phone" required />
+        <input type="submit" value="Contact us" />
+    </form>
+    <p><a href="index.php">Or go back to the home page</a></p>
+{% endblock %}

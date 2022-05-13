@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ animal.name }}</h1>
+    <p>{{ animal.bio }}</p>
+
+    <ul>
+        <li>Type: {{ animal.type }}</li>
+        <li>Breed: {{ animal.breed }}</li>
+        <li>Family friendliness: {{ animal.family }}</li>
+        <li>Exercise frequency: {{ animal.exercise }}</li>
+        <li>Born: {{ animal.born }}</li>
+        <li>Rescued on: {{ animal.rescued_date }}</li>
+    </ul>
+    
+    <form action="" method="POST">
+        <input type="hidden" name="animalId" value="{{ animal.id }}" />
+        <input type="email" name="email" placeholder="Your email" required />
+        <input type="tel" name="phone" placeholder="Your phone" required />
+        <input type="submit" value="Adopt me" />
+    </form>
+
+    <p><a href="index.php">Back</a></p>
+
+    <img src="{{ animal.image }}" alt="{{ animal.name }}" style="width:20%">
+
+{% endblock %}
