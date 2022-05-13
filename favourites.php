@@ -8,33 +8,23 @@ function removeFavourite(){
     unset($_SESSION["favourite"]);
 }
 
+
 if(isset($_SESSION["favourite"])){ 
     $fav= implode(" ",$_SESSION["favourite"]);
-    $db = new Db();    
+    $db = new Db(); 
     $foodID = $db -> quote($fav);
-    $result = $db -> select("SELECT Name, Description, Price, Type FROM menuitems WHERE ID=". $foodID);
-       
+
+    foreach($_SESSION["favourite"] as $fav){
+    $result = $db -> select("SELECT Name, Description, Price, Type FROM menuitems WHERE ID=". $fav);
+    
 
     if(count($result) > 0){
-
-
-        // Animal loaded from store
-        $food = [
-
-                'Name'              => $result[0]['Name'],
-                'Description'       => $result[0]['Description'],
-                'Price'             => $result[0]['Price'],
-                'Type'              => $result[0]['Type'],
-
-        ];
-        // Render view
-        echo $twig->render('favourites.html', ['menuitems' => $food] );
-    
+        echo $twig->render('favourites.html', ['menuitems' => $result] );
+    }else
+    echo  $twig->render('noFavourites.html');   
+}
 }else
 echo $twig->render('404.html');
-    
-}else
-echo  $twig->render('noFavourites.html');
 
 
 
