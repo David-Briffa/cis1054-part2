@@ -1,13 +1,24 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Menu</h1>
-    <p>Supperthyme</p>
+    
+    <div class="slider">
+        <div class="load"> 
+        </div>
+        <div class="content">
+        </div>
+        <div class="principal">
+            <h1>Menu</h1>
+            <p>"Our passion on a plate"</p>
+        </div>
+    </div>
     {% for menuitem in menuitems %}
-            <div class="container">
+    
+            <div class="containerDishes">
                 <h4><b>{{ menuitem.name }}</b></h4> 
-                <p>{{ menuitem.Price }}</p> 
-                <p><a href="menu_details.php?pid={{ menuitem.ID }}">Details about {{ menuitem.name }}</a></p>
+                {{ menuitem.Price }}
+                <form action='menu_details.php?pid={{ menuitem.ID }}' method='post'>
+                    <input type='submit' name='goToFavourites' class='favbutton' value='Details' />
+                </form>
             </div>
-        <br/>
     {% endfor %}
 {% endblock %}

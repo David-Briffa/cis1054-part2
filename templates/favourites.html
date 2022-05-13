@@ -2,19 +2,20 @@
 
 {% block content %}
 
-<div class="container">
+<div class="containerDishes">
     <h1>{{ menuitems.Type }}</h1>
     <h1>{{ menuitems.Name }}</h1>
     <p>{{ menuitems.Description }}</p>
-    <p>{{ menuitems.Price }}</p>
-</div>
+    <p>{{ menuitems.Price }} €</p>
     <br/>
+    Remove dish from favourites! &#8594;
+    <form method='post'>
+        <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' /><br><br>
+    </form>
+</div>
+  
 
-        Remove dish from favourites! &#8594;
-        <form method='post'>
-            <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' /><br><br>
-        </form>
-
+       
 
 
 {% endblock %}
