@@ -1,18 +1,23 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block content %} {% for menuitem in menuitems %}
 
-{% block content %}
-{% for menuitem in menuitems %}
-
-<div class="containerDishes">
+<div class="middle">
+  <div class="divider"></div>
+  <div class="containerDishes border blackBorder">
     <h1><u>{{ menuitem.Type }}</u></h1>
     <h1>{{ menuitem.Name }}</h1>
     <p>{{ menuitem.Description }}</p>
     <p>{{ menuitem.Price }} €</p>
-    <br/>
+    <br />
     Remove dish from favourites! &#8594;
-    <form method='post'>
-        <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' /><br><br>
+    <form method="post">
+      <input
+        type="submit"
+        name="removeFavourite"
+        class="favbutton"
+        value=" &#x1F62D; "
+      /><br /><br />
     </form>
+  </div>
+  <div class="divider"></div>
 </div>
-{% endfor %}
-{% endblock %}
+{% endfor %} {% endblock %}
