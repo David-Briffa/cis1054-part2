@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="containerDishes">
+{% for menuitem in menuitems %}
 
-    <h1><u>{{ menuitems.Type }}</u></h1>
-    <h1>{{ menuitems.Name }}</h1>
-    <p>{{ menuitems.Description }}</p>
-    <p>{{ menuitems.Price }} €</p>
+<div class="containerDishes">
+    <h1><u>{{ menuitem.Type }}</u></h1>
+    <h1>{{ menuitem.Name }}</h1>
+    <p>{{ menuitem.Description }}</p>
+    <p>{{ menuitem.Price }} €</p>
 
     <form method='post'>
         <input type='submit' name='setFavourite' class='favbutton' value=' &hearts; ' />
@@ -15,4 +16,5 @@
         <br><input type='submit' name='goToFavourites' class='favbutton' value='Go to favourites' />
     </form>
 </div>   
+{% endfor %}
 {% endblock %}
