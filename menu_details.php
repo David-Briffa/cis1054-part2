@@ -33,17 +33,7 @@ if(isset($_GET['pid']))
     $result = $db -> select("SELECT Name, Description, Price, Type FROM menuitems WHERE ID=". $foodID);
 
     if (count($result) > 0){
-        // Animal loaded from store
-        $food = [
-
-                'Name'              => $result[0]['Name'],
-                'Description'       => $result[0]['Description'],
-                'Price'             => $result[0]['Price'],
-                'Type'              => $result[0]['Type'],
-
-        ];
-        // Render view
-        echo $twig->render('details.html', ['menuitems' => $food] );
+        echo $twig->render('details.html', ['menuitems' => $result] );
     }
     else
         echo $twig->render('404.html');
