@@ -17,14 +17,11 @@ if(isset($_SESSION["favourite"])){
     foreach($_SESSION["favourite"] as $fav){
     $result = $db -> select("SELECT Name, Description, Price, Type FROM menuitems WHERE ID=". $fav);
     
-
-    if(count($result) > 0){
         echo $twig->render('favourites.html', ['menuitems' => $result] );
-    }else
-    echo  $twig->render('noFavourites.html');   
+     
 }
 }else
-echo $twig->render('404.html');
+echo  $twig->render('noFavourites.html');   
 
 
 
