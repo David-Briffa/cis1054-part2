@@ -12,11 +12,13 @@ require_once 'db-inc.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="Styles/MenuStyle.css">
-    <link rel="stylesheet" href="Styles/heFoStyleWhite.css">
 </head>
 
 <body>
-    <?php include "header.html" ?>
+    <div class="whiteLogo">
+        <?php include "header.html" ?>
+    </div>
+
     <div class="slider">
         <div class="load">
         </div>

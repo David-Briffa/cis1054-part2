@@ -1,11 +1,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="./Styles/heFoStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
-    <title>Restaurant Name</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <title>SupperThyme</title>
 </head>
 
 <body>
@@ -137,7 +138,9 @@
     $stmt->execute();
     ?>
 
-    <?php include "header.html" ?>
+    <div class="yellowLogo">
+        <?php include "header.html" ?>
+    </div>
 
     <div class="middle">
         <div class="divider"></div>

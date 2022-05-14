@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="./Styles/heFoStyle.css">
     <link rel="script" src="main.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +16,9 @@
 </head>
 
 <body>
-    <?php include "header.html" ?>
+    <div class="yellowLogo">
+        <?php include "header.html" ?>
+    </div>
 
     <div class="middle">
         <div class="divider"></div>

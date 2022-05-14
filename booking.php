@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Styles/bookingStyle.css" />
-    <link rel="stylesheet" type="text/css" href="./Styles/heFoStyle.css">
+    <link rel="stylesheet" href="./Styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,16 +15,18 @@
 </head>
 
 <body>
-    <?php include "header.html" ?>
+    <div class="yellowLogo">
+        <?php include "header.html" ?>
+    </div>
 
-    <div class="middle">
+    <div class="middle bookingMid">
         <div class="divider"></div>
         <div class="divider"></div>
 
         <div class="bookingForm blackBorder">
             <h2>MAKE YOUR RESERVATION!</h2>
-            <div class="img"></div>
-            <div class="content">
+            <div class="bookingImg"></div>
+            <div class="bookingContent">
                 <h3>Reservation</h3>
 
                 <?php $minDate = date("Y-m-d") ?>
