@@ -5,24 +5,24 @@
 {% block content %}
 {% for menuitem in menuitems %}
 
-<div class="containerDishes">
-    <h1><u>{{ menuitem.Type }}</u></h1>
+<div class="containerFavourites">
     <h1>{{ menuitem.Name }}</h1>
     <p>{{ menuitem.Description }}</p>
     <p>{{ menuitem.Price }} €</p>
-    <br/>
+    
     Remove dish from favourites! &#8594;
     <form method='post'>
-        <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' /><br><br>
+        <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' />
     </form>
-    <div class='container'><br><br>
-        <form action="https://formsubmit.co/53e105389c70a4320964f9765f58b510" method="POST">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
-            <input type="email" name="_cc" value="another@email.com">
-            <button type="submit">Send</button>
-       </form>
-    </div>
-</div>
+    
 {% endfor %}
+<div class='container'>
+    <form action="https://formsubmit.co/53e105389c70a4320964f9765f58b510" method="POST">
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <input type="email" name="_cc" value="another@email.com">
+        <button type="submit">Send</button>
+   </form>
+</div>
+</div>
 {% endblock %}
