@@ -2,18 +2,16 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>SupperThyme</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="Styles/style.css" />
-  </head>
-  <div class="header border">
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SupperThyme {% block page_title %} {% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<div class="header border">
     <nav class="navbar">
       <a href="index.php">
         <div class="logo">
@@ -22,51 +20,53 @@
           <p class="logoText">SupperThyme</p>
         </div>
       </a>
-
+  
       <div class="menu">
         <ul>
           <li><a href="./index.php">Home</a></li>
           <li><a href="./menu.php">Menu</a></li>
-          <li><a href="./favourites.php">Favorites</a></li>
+          <li><a href="./favourites.php">Favourites</a></li>
         </ul>
       </div>
-
+  
       <div class="cta">
         <a href="./booking.php">Book now!</a>
       </div>
     </nav>
   </div>
+  
+<body>
 
-  <body>
-    {% block menu %} {% endblock %} {% block content %} {% endblock %}
-  </body>
-  <div class="footer border">
-    <div class="footerText">
+    {% block menu %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+<div class="footer border">
+    <div class="Contact_details footerText">
       <h2>Contact details</h2>
       <p>Address: 45 Triq Hal-Gharghur, San Ġwann</p>
       <p>Telephone number: +356 999999999</p>
       <p>Email address: sampleemail@gmail.com</p>
     </div>
 
-    <div class="footerText">
+    <div class="Opening_hours footerText">
       <h2>Opening hours</h2>
       <p>MON - FRI: 17:30 - 22:30</p>
       <p>SUN: 12:00 - 15:30</p>
     </div>
 
-    <div class="footerText">
+    <div class="Location footerText">
       <h2>Location</h2>
       <map class="map" name="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1615.7592403116178!2d14.461759976073377!3d35.90980716744374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x599f84b355ec0d56!2zMzXCsDU0JzM1LjMiTiAxNMKwMjcnNDYuMyJF!5e0!3m2!1sen!2smt!4v1650898665029!5m2!1sen!2smt"
-          width="300vh"
-          height="200vh"
-          style="border: 0"
-          allowfullscreen="y"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+          width="300vh" height="200vh" style="border:0" allowfullscreen="y" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </map>
     </div>
   </div>
+
 </html>
