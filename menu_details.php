@@ -5,23 +5,19 @@ require_once __DIR__.'/db-inc.php';
 require_once __DIR__.'/session.php';
 
 $favID = $_GET['pid'];
-if(array_key_exists('goToFavourites', $_POST)) {
-    goToFavourites();
-}
-function goToFavourites() {
-    
-}
-
-
+$favArray = array();
 
 if(array_key_exists('setFavourite', $_POST)) {
     setFavourite();
 }
 function setFavourite(){  
     global $favID;
+    global $favArray;
     if(!isset($_SESSION["favourite"])){
-        $favArray = array();
+        
         $_SESSION["favourite"] = $favArray;
+        array_push($_SESSION["favourite"], $favID);
+
     }
     else{   array_push($_SESSION["favourite"], $favID); }
 }
