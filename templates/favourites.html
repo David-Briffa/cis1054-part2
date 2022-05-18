@@ -5,24 +5,28 @@
 {% block content %}
 {% for menuitem in menuitems %}
 
+
 <div class="containerFavourites">
-    <h1>{{ menuitem.Name }}</h1>
+    {% set counter = ( counter | default(0) ) + 1 %}
+    <h1>{{ counter ~ ' ). ' ~ item.title }}{{ menuitem.Name }}</h1>
     <p>{{ menuitem.Description }}</p>
     <p>{{ menuitem.Price }} €</p>
+   
     
     Remove dish from favourites! &#8594;
-    <form method='post'>
+    <form action='favourites.php?rmv={{ menuitem.ID }}' method='post'>
+        
         <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' />
     </form>
-    
+</div>
 {% endfor %}
-<div class='container'>
-    <form action="https://formsubmit.co/53e105389c70a4320964f9765f58b510" method="POST">
-        <input type="text" name="name" required>
-        <input type="email" name="email" required>
-        <input type="email" name="_cc" value="another@email.com">
-        <button type="submit">Send</button>
-   </form>
+<div class='container'><br><br>
+    <form method='post'>
+        Send this list to your friends!<Br> &darr; <br>
+        Your Email:   <input type='email' name='from' class='email' onfocus="this.value=''" value='your_email@supperthymeftw.com'/><br><br>
+        Recipient's email:   <input type='email' name='to' class='email' onfocus="this.value=''" value='your_friend@BFF.com'/><br><br>
+        <input type='submit' name='sendEmail' class='favbutton' value=' &#128231; ' /><br><br>
+    </form>
 </div>
-</div>
+
 {% endblock %}
