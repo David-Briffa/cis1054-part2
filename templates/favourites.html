@@ -11,20 +11,21 @@
     <h1>{{ counter ~ ' ). ' ~ item.title }}{{ menuitem.Name }}</h1>
     <p>{{ menuitem.Description }}</p>
     <p>{{ menuitem.Price }} €</p>
-   
-    
+       
     Remove dish from favourites! &#8594;
     <form action='favourites.php?rmv={{ menuitem.ID }}' method='post'>
-        
-        <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' />
+              <input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' />
     </form>
 </div>
 {% endfor %}
+<span class="validation">{{ validations.pagemessage }}</span>
 <div class='container'><br><br>
-    <form method='post'>
-        Send this list to your friends!<Br> &darr; <br>
-        Your Email:   <input type='email' name='from' class='email' onfocus="this.value=''" value='your_email@supperthymeftw.com'/><br><br>
-        Recipient's email:   <input type='email' name='to' class='email' onfocus="this.value=''" value='your_friend@BFF.com'/><br><br>
+    <form action="send_favourites.php" method='post'>
+        <span class="validation">{{ validations.emailError }}</span>
+
+        <br><br>Send this list to your friends!<Br> &darr; <br><br>
+        <input placeholder="your@email.com" name='from' class='email' value='{{ formvalues.from }}' required/><br><br>
+        <input placeholder="yourfriend@email.com" name='to' class='email' value='{{ formvalues.to }}' required/><br><br>
         <input type='submit' name='sendEmail' class='favbutton' value=' &#128231; ' /><br><br>
     </form>
 </div>
