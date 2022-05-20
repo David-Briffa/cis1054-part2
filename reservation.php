@@ -140,3 +140,5 @@ if (isset($_REQUEST["submit"])) {
 } else {
     echo $twig->render('404.html');
 }
+
+require_once 'footer.php';

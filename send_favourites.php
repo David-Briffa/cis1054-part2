@@ -62,3 +62,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     else {
         echo $twig->render('favourites.html');
     }
+    require_once 'footer.php';
