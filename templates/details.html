@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block page_title %}
+    Details
+{% endblock %}
+{% block content %}
+{% for menuitem in menuitems %}
+
+<div class="containerDishes">
+    <h1><u>{{ menuitem.Type }}</u></h1>
+    <h1>{{ menuitem.Name }}</h1>
+    <p>{{ menuitem.Description }}</p>
+    <p>{{ menuitem.Price }} €</p>
+
+    <form method='post'>
+        <input type='submit' name='setFavourite' class='favbutton' value=' &hearts; ' />
+    </form>                          
+    <form action='favourites.php' method='post'>
+        <br><input type='submit' name='goToFavourites' class='favbutton' value='Go to favourites' />
+    </form>
+</div>   
+{% endfor %}
+{% endblock %}

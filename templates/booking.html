@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block page_title %}
+    Reservations
+{% endblock %}
+{% block content %}
+<div class="middle">
+    <div class="divider"></div>
+    <div class="divider"></div>
+
+    <div class="bookingForm blackBorder">
+        <h2>MAKE YOUR RESERVATION!</h2>
+        <div class="img"></div>
+        <div class="content">
+            <h3>Reservation</h3>
+
+
+            <form action="reservation.php" method="post">
+                <div class="formRow">
+                    <input type="date" name="date" id="date" placeholder="Select Date" min="{{minDate}}"
+                        required />
+                    <input type="time" name="time" id="time" placeholder="Select Time" required />
+                </div>
+
+                <div class="formRow">
+                    <input type="text" name="name" placeholder="Full Name" required />
+                    <input type="tel" name="number" placeholder="Phone Number" />
+                </div>
+
+                <div class="formRow">
+                    <input type="email" name="email" placeholder="Email Address" />
+                    <input type="number" name="peopleNumber" id="peopleNumber" placeholder="Number of People"
+                        required />
+                </div>
+
+                <div class="formRow">
+                    <input type="submit" name="submit" value="Book Table Now!" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

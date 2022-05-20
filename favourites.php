@@ -1,74 +1,41 @@
 <?php
-require_once 'db-inc.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
+require_once __DIR__.'/bootstrap.php';
+require_once __DIR__.'/db-inc.php';
+require_once __DIR__.'/session.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favourites</title>
-    <link rel="stylesheet" href="Styles/MenuStyle.css">
-    <link rel="stylesheet" href="Styles/heFoStyleWhite.css">
-</head>
+//binds the removefavourite button with the function below
+if(array_key_exists('removeFavourite', $_POST)) { removeFavourite(); }
 
-<body>
-    <?php include "header.html" ?>
-    <div class='container'>
-        <u> Favourites </u>
-    </div>
-    <?php
-    session_start();
-    if (empty($_SESSION["favourite"])) {
-
-        echo "<div class='emptyFavs'>";
-        echo "<br><br>You have no favourite dishes, let's work on that.<br>";
-        echo "<br><a class='favbutton' href='menu.php'>Go to Menu</a>";
-        echo "</div>";
+//since this session is an array, a key is used to find the index which is then used to remove the appropriate items
+function removeFavourite(){
+    //when there is only one item in favourites, unsets the whole thing to avoid an array indexing error
+    if (sizeof($_SESSION["favourite"]) == 1){ 
+        unset($_SESSION["favourite"]);
     }
-    if (array_key_exists('removeFavourite', $_POST)) {
-        removeFavourite();
-    }
-    function removeFavourite()
-    {
-        //unset($_SESSION["favourite"]);
-        array_pop($_SESSION["favourite"]);
-    }
-
-    if (isset($_SESSION["favourite"])) {
-        $fav = $_SESSION["favourite"];
-        foreach ($_SESSION["favourite"] as $fav) {
-            $sqlquery = "SELECT * FROM menu.menuitems WHERE ID =" . $fav;
-            $queryResult = mysqli_query($conn, $sqlquery);
-            $resultCheck = mysqli_num_rows($queryResult);
-
-            if ($resultCheck > 0) {
-                echo "<div class='container'>";
-                while ($row = mysqli_fetch_assoc($queryResult)) {
-                    echo "<div class='menu'>";
-                    echo "<br><br>";
-                    echo $row['Name'] . " ";
-                    echo $row['Price'] . "€" . "<br>";
-                    echo "<div class='description'>";
-                    echo $row['Description'];
-                    echo "<br><br>";
-                    echo "<div class='favourite'>";
-                    echo "<br><br>";
-                    echo "Remove dish from favourites! &#8594;";
-                    echo "<form method='post'>";
-                    echo "<input type='submit' name='removeFavourite' class='favbutton' value=' &#x1F62D; ' />" . "<br><br>";
-                    echo " </form>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</div>";
-                }
-                echo "</div>";
-            }
+        elseif (isset($_SESSION["favourite"])){
+            $key = $_REQUEST['rmv'];
+            $index = array_search($key,$_SESSION["favourite"]);
+            unset($_SESSION["favourite"][$index]);  
         }
     }
-    ?>
-    <?php include "footer.html" ?>
-</body>
 
-</html>
+    if(isset($_SESSION["favourite"])){ 
+        $db = new Db(); 
+        $implodedArray = implode(", ",$_SESSION["favourite"]);  //splits the array into numbers that can be used in the query below   
+        $result = $db -> select("SELECT ID, Name, Description, Price, Type FROM menuitems WHERE menuitems.ID IN (" . $implodedArray . ")");
+
+        if(count($result) > 0){
+        echo $twig->render('favourites.html', ['menuitems' => $result] );
+    }
+    }else 
+        echo $twig->render('noFavourites.html');   
+        //echoes out the noFavourites page if the session array is empty
+
+
+
+
+
+
+
+
+   
