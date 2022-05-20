@@ -1,538 +1,540 @@
-/*Stylesheet for the menu page and menu details */
-
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: #000000;
-    color: rgb(255, 187, 0);
-    font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 2%;
-  }
-  
-  /*CONTENT*/
-  .middle {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 800;
-    font-size: 1.2rem;
-    border-width: 3.5px;
-    border-style: outset;
-    border-top: none;
-    border-bottom: none;
-    border-left: solid rgb(255, 187, 0);
-    border-right: solid rgb(255, 187, 0);
-    background-image: url("https://live.staticflickr.com/65535/52048262013_96243c4522_h.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .border {
-    border: solid rgb(255, 187, 0);
-    border-width: 3.5px;
-    border-style: outset;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-  }
-  
-  .blackBorder {
-    border: solid #000000;
-    border-width: 3.5px;
-    border-style: outset;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-  }
-  
-  .divider {
-    height: 50px;
-    opacity: 0;
-  }
-  
-  .bookingForm {
-    background-color: rgba(255, 187, 0, 0.7);
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex: 1 1 auto;
-    padding: 1% 3%;
-  }
+  background-color: #000000;
+  color: rgb(255, 187, 0);
+  font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 2%;
+}
 
-  
-  .container h3 {
-    padding-top: 0;
-  }
-  
-  .img {
-    background-image: url("https://st2.depositphotos.com/1044234/5212/i/950/depositphotos_52128155-stock-photo-table-setting-for-celebration.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 45vh;
-    height: 30vh;
-    flex-shrink: 1 2 auto;
-  }
-  
-  .content {
-    padding: 1% 0px;
-    font-size: 2vh;
-  }
-  
-  .formRow {
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .formRow input {
-    display: block;
-    width: 100%;
-    margin: 2.5% 3%;
-    padding: 0.4vh;
-    font-size: 0.8em;
-    font-weight: 600;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000000;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-  }
-  
-  .formRow input[type="submit"] {
-    color: rgb(255, 187, 0);
-    background-color: #000000;
-    padding: 14px 0;
-    cursor: pointer;
-  }
-  
-  .formRow input[type="submit"]:hover {
-    background-color: #333333;
-  }
+/*CONTENT*/
+.middle {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-width: 3.5px;
+  border-style: outset;
+  border-top: none;
+  border-bottom: none;
+  border-left: solid rgb(255, 187, 0);
+  border-right: solid rgb(255, 187, 0);
+  background-image: url("https://live.staticflickr.com/65535/52048262013_96243c4522_h.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.border {
+  border: solid rgb(255, 187, 0);
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.blackBorder {
+  border: solid #000000;
+  border-width: 3.5px;
+  border-style: outset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.divider {
+  height: 50px;
+  opacity: 0;
+}
+
+.bookingForm {
+  background-color: rgba(255, 187, 0, 0.7);
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 auto;
+  padding: 1% 3%;
+}
+
+.container h3 {
+  padding-top: 0;
+}
+
+.img {
+  background-image: url("https://st2.depositphotos.com/1044234/5212/i/950/depositphotos_52128155-stock-photo-table-setting-for-celebration.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 45vh;
+  height: 30vh;
+  flex-shrink: 1 2 auto;
+}
+
+.content {
+  padding: 1% 0px;
+  font-size: 2vh;
+}
+
+.formRow {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.formRow input {
+  display: block;
+  width: 100%;
+  margin: 2.5% 3%;
+  padding: 0.4vh;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000000;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.formRow input[type="submit"] {
+  color: rgb(255, 187, 0);
+  background-color: #000000;
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+.formRow input[type="submit"]:hover {
+  background-color: #333333;
+}
 .categoryDivider {
-    position: relative;
-    border: 3px solid darkgray;
-    background-image: url('https://wallpaperforu.com/wp-content/uploads/2020/10/food-wallpaper-20100313235930-scaled.jpg');
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: Palace Script MT;
-    font-size: 6vw;
-    max-width:100%;
-    max-height:20vh;
-    letter-spacing:5px;
-    text-align: center;
-    font-weight:bold;
-    color:rgb(255, 187, 0);
-    user-select: none;
+  position: relative;
+  border: 3px solid darkgray;
+  background-image: url("https://wallpaperforu.com/wp-content/uploads/2020/10/food-wallpaper-20100313235930-scaled.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* font-family: Palace Script MT; */
+  font-size: 6vw;
+  max-width: 100%;
+  max-height: 20vh;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 187, 0);
+  user-select: none;
 }
-.topnav{
-    text-align:right;
-    font-size: 2.7vw;
-
+.topnav {
+  text-align: right;
+  font-size: 2.7vw;
 }
-.divider a{
-    color: rgb(255, 187, 0);
+.divider a {
+  color: rgb(255, 187, 0);
 }
 .dishContainer {
-    background-image: url('https://www.templestowehotel.com.au/wp-content/uploads/2016/12/Blackboard-bg.jpg');
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    color:ivory;
-    font-size: 1.5vw;
-    text-align: center;
-    font-family: Felix Titling;
-    user-select: none;
-
+  background-image: url("https://www.templestowehotel.com.au/wp-content/uploads/2016/12/Blackboard-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: ivory;
+  font-size: 1.5vw;
+  text-align: center;
+  font-family: Felix Titling;
+  user-select: none;
 }
-.load{
-    animation: slide 2s;
+.load {
+  animation: slide 2s;
 }
-.slider{
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center;
-    width:100%;
-    height:80vh;
-    animation: slide 40s infinite;
+.slider {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+  animation: slide 40s infinite;
+  color: #fff;
+  -webkit-animation: slide 40s infinite;
 }
-.content{
-    color:#fff;
-    width:100%;
-    height:100vh;
-    background-color:rgba(0,0,0,0.5);
+.menuContent {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 60vh;
 }
-.principal{
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    position:absolute;
-    font-family: Palace Script MT;
-    letter-spacing:5px;
-    text-align: center;
-    color: ivory;
-    user-select: none;
+.principal {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-family: Palace Script MT;
+  letter-spacing: 5px;
+  text-align: center;
+  color: ivory;
+  user-select: none;
 }
-.principal h1{
-    font-size:13vw;
-    margin-bottom:0.5rem;
+.principal h1 {
+  font-size: 13vw;
+  margin-bottom: 0.5rem;
 }
-.principal p{
-    font-size:5.5vw;
+.principal p {
+  font-size: 5.5vw;
 }
 @keyframes slide {
-    0% {
-background-image: url('https://live.staticflickr.com/65535/52004171903_b0e0afa5aa_b.jpg');
-    }
-    20% {
-background-image: url('https://live.staticflickr.com/65535/52004636190_94cc559e0d_b.jpg');
-    }
-    30% {
-background-image: url('https://live.staticflickr.com/65535/52004366729_dd4fc56af5_c.jpg');
-    }
-    40% {
-background-image: url('https://live.staticflickr.com/65535/52004366699_660a32a475_c.jpg');
-    }
-    50% {
-background-image: url('https://live.staticflickr.com/65535/52004171998_c7b917c92c_b.jpg');
-    }
-    60% {
-background-image: url('https://live.staticflickr.com/65535/52004366534_9d3ec3e6f4_b.jpg');
-    }
-    70% {
-background-image: url('https://live.staticflickr.com/65535/52004171868_8f364f75c3_b.jpg');
-    }
-    80% {
-background-image: url('https://live.staticflickr.com/65535/52004199283_9ebbbba770_z.jpg');
-    }
-    90% {
-background-image: url('https://live.staticflickr.com/65535/52004636225_868b1a6534_b.jpg');
-    }
-    100% {
-background-image: url('https://live.staticflickr.com/65535/52004636210_da359eecd4_b.jpg');
-    }
+  0% {
+    background-image: url("https://live.staticflickr.com/65535/52004171903_b0e0afa5aa_b.jpg");
+  }
+  20% {
+    background-image: url("https://live.staticflickr.com/65535/52004636190_94cc559e0d_b.jpg");
+  }
+  30% {
+    background-image: url("https://live.staticflickr.com/65535/52004366729_dd4fc56af5_c.jpg");
+  }
+  40% {
+    background-image: url("https://live.staticflickr.com/65535/52004366699_660a32a475_c.jpg");
+  }
+  50% {
+    background-image: url("https://live.staticflickr.com/65535/52004171998_c7b917c92c_b.jpg");
+  }
+  60% {
+    background-image: url("https://live.staticflickr.com/65535/52004366534_9d3ec3e6f4_b.jpg");
+  }
+  70% {
+    background-image: url("https://live.staticflickr.com/65535/52004171868_8f364f75c3_b.jpg");
+  }
+  80% {
+    background-image: url("https://live.staticflickr.com/65535/52004199283_9ebbbba770_z.jpg");
+  }
+  90% {
+    background-image: url("https://live.staticflickr.com/65535/52004636225_868b1a6534_b.jpg");
+  }
+  100% {
+    background-image: url("https://live.staticflickr.com/65535/52004636210_da359eecd4_b.jpg");
+  }
 }
 .menu {
-    font-family: Baskerville Old Face;
-    font-size: 3vw; 
-    user-select: none;
+  /* font-family: Baskerville Old Face; */
+  font-size: 3vw;
+  user-select: none;
 }
 .description {
-    font-style: italic;
-    font-size: 2.2vw;
-    user-select: none;
+  font-style: italic;
+  font-size: 2.2vw;
+  user-select: none;
 }
 .form {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button {
-    transition-duration: 0.4s;
-    font-size: 4rem;
-    font-family: Palace Script MT;
-    background-color: gray;
-    border-radius: 10px;
-    border: 2px solid black;
-} 
-.button:hover {
-    background-color: white;
+  transition-duration: 0.4s;
+  font-size: 4rem;
+  /* font-family: Palace Script MT; */
+  background-color: gray;
+  border-radius: 10px;
+  border: 2px solid black;
 }
-.favourite{
-    font-size:3vw;
+.button:hover {
+  background-color: white;
+}
+.favourite {
+  font-size: 3vw;
 }
 .favbutton {
-    font-size: 2vw;
-    padding: 1.5px;
-    background-color: ivory;
-    border-radius: 40px;
-    transition-duration: 0.4s;
+  color: rgb(255, 187, 0);
+  font-size: 2vw;
+  padding: 10px 15px;
+  background-color: #000000;
+  border-radius: 40px;
+  transition-duration: 0.4s;
 }
+
+.favbutton a {
+  text-decoration: none;
+}
+
 .favbutton:hover {
-    background-color: rgb(173, 24, 24);
+  background-color: rgb(173, 24, 24);
 }
 .details {
-    font-size: 2vw;
-    padding: 1.5px;
-    background-color: ivory;
-    border-radius: 10px;
-    transition-duration: 0.4s;
+  font-size: 2vw;
+  padding: 1.5px;
+  background-color: ivory;
+  border-radius: 10px;
+  transition-duration: 0.4s;
 }
 
 .details:hover {
-    background-color: rgb(255, 187, 0);
+  background-color: rgb(255, 187, 0);
 }
 .emptyFavs {
-    background-image: url(https://cdn.pixabay.com/photo/2018/05/28/18/35/desert-3436700_960_720.jpg);
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center;
-    color:black;
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: Felix Titling;
-    user-select: none;
-    width:100%;
-    height:80vh;
+  background-image: url(https://cdn.pixabay.com/photo/2018/05/28/18/35/desert-3436700_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: Felix Titling;
+  user-select: none;
+  width: 100%;
+  height: 80vh;
 }
 .email {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 .body404 {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: linear-gradient(to bottom right, #000000, rgb(255, 175, 0));
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
-    font-size: 1rem;
-    font-weight: 500;
-    flex: 1, 1, auto;
-  }
-  
-  .alink {
-    text-decoration: none;
-    color: rgb(255, 175, 0);
-    padding: 1.5vh;
-    background-color: #000000;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-  }
-  
-  .alink:hover {
-    cursor: pointer;
-    background-color: #141414;
-  }
-  
-  .container2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-  }
-  .container {
-    margin: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex-shrink: 1 1 auto;
-    padding: 2%;
-    background-color: rgba(255, 187, 0, 0.75);
-    justify-content: center;
-    align-content: center;
-  }
-  .containerDishes{
-    font-family: Palace Script MT;
-    font-size: 4vw;
-    margin: 1%;
-    padding: 0.5%;
-    color:black;
-    background-color: rgba(255, 187, 0, 0.75);
-    text-align: center;
-  }
-  .containerFavourites{
-    font-family: Palace Script MT;
-    font-size: 2.5vw;
-    margin: 1%;
-    padding: 0.5%;
-    color:black;
-    background-color: rgba(255, 187, 0, 0.75);
-    text-align: center;
-  }
-  
-  .wrapReverse {
-    flex-wrap: wrap-reverse;
-  }
-  
-  .img {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: auto;
-    margin: 3%;
-    width: 10vh;
-    height: auto;
-    min-width: 40vh;
-    max-width: 600px;
-    min-height: 350px;
-    flex: 1 1 auto;
-  }
-  
-  .kitchenImg{
-    background-image: url("https://live.staticflickr.com/65535/52047169527_880c5f95b5_z.jpg");
-  }
-  
-  .takeawayImg{
-    background-image: url("https://live.staticflickr.com/65535/52047169612_d1d3e938ed_z.jpg");
-  }
-  
-  .takeOrderImg{
-    background-image: url("https://live.staticflickr.com/65535/52048458689_fa83e1fe64_z.jpg");
-  }
-  
-  .barImg{
-    background-image: url("https://live.staticflickr.com/65535/52048720495_8d27775822_z.jpg");
-  }
-  
-  .tableImg{
-    background-image: url("https://live.staticflickr.com/65535/52048218011_a8615eb955_b.jpg");
-  }
-  
-  .openingImg{
-    background-image: url("https://live.staticflickr.com/65535/52047169517_a8bf76153f_z.jpg");
-  }
-  
-  .sideTxt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3%;
-    max-width: 800px;
-    flex: 1 1 auto;
-    color: #000000;
-  }
-  
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #000000, rgb(255, 175, 0));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
+  font-size: 1rem;
+  font-weight: 500;
+  flex: 1, 1, auto;
+}
+
+.alink {
+  text-decoration: none;
+  color: rgb(255, 175, 0);
+  padding: 1.5vh;
+  background-color: #000000;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.alink:hover {
+  cursor: pointer;
+  background-color: #141414;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+.container {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-shrink: 1 1 auto;
+  padding: 2%;
+  background-color: rgba(255, 187, 0, 0.75);
+  justify-content: center;
+  align-content: center;
+}
+.containerDishes {
+  font-family: Palace Script MT;
+  font-size: 2.5em;
+  min-width: 100vh;
+  min-height: auto;
+  padding: 5vh 10vh;
+  color: black;
+  background-color: rgba(255, 187, 0, 0.75);
+  text-align: center;
+}
+
+.wrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  margin: 3%;
+  width: 10vh;
+  height: auto;
+  min-width: 40vh;
+  max-width: 600px;
+  min-height: 350px;
+  flex: 1 1 auto;
+}
+
+.kitchenImg {
+  background-image: url("https://live.staticflickr.com/65535/52047169527_880c5f95b5_z.jpg");
+}
+
+.takeawayImg {
+  background-image: url("https://live.staticflickr.com/65535/52047169612_d1d3e938ed_z.jpg");
+}
+
+.takeOrderImg {
+  background-image: url("https://live.staticflickr.com/65535/52048458689_fa83e1fe64_z.jpg");
+}
+
+.barImg {
+  background-image: url("https://live.staticflickr.com/65535/52048720495_8d27775822_z.jpg");
+}
+
+.tableImg {
+  background-image: url("https://live.staticflickr.com/65535/52048218011_a8615eb955_b.jpg");
+}
+
+.openingImg {
+  background-image: url("https://live.staticflickr.com/65535/52047169517_a8bf76153f_z.jpg");
+}
+
+.sideTxt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  max-width: 800px;
+  flex: 1 1 auto;
+  color: #000000;
+}
+
+/*HEADER STYLE*/
 
 .navbar {
-    background-color: #000000;
-    color: rgb(255, 187, 0);
-    font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
-    font-size: 1.5rem;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
+  background-color: #000000;
+  color: rgb(255, 187, 0);
+  font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 0vh;
+  text-align: center;
+}
+
+.logoText {
+  padding-left: 1vh;
+}
+
+.imgNav {
+  background-image: url("https://live.staticflickr.com/65535/52048454364_90053642e8.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  width: 5rem;
+  height: 5rem;
+  /* padding-left: 1vh; */
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: left;
+  width: auto;
+  list-style-position: outside;
+}
+
+.menu li {
+  padding: 0 1vh;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 1vh;
+  display: block;
+  color: inherit;
+}
+
+.cta {
+  padding: 0.5em;
+  display: block;
+}
+
+.menu a:hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+
+.cta:hover {
+  cursor: pointer;
+  background-color: #333333;
+}
+
+/*FOOTER STYLE*/
+
+.footer {
+  background-color: #000000;
+  color: rgb(255, 187, 0);
+  font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footerText {
+  text-align: center;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.footerText p {
+  padding-top: 8px;
+}
+
+/*404 PAGE STYLE*/
+
+@media (max-width: 60em) {
+  .navbar {
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    font-size: 1.2em;
+    justify-content: flex-start;
   }
-  
-  .logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0em 0vh;
-    text-align: center;
-  }
-  
-  .logoText {
-    padding-left: 1vh;
-  }
-  
-  .imgNav {
-    background-image: url("https://live.staticflickr.com/65535/52048454364_90053642e8.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: auto;
-    width: 5rem;
-    height: 5rem;
-    /* padding-left: 1vh; */
-  }
-  
-  .menu ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    align-items: left;
-    width: auto;
-    list-style-position: outside;
-  }
-  
-  .menu li {
+
+  .navbar div {
     padding: 0 1vh;
   }
-  
-  .navbar a {
-    text-decoration: none;
-    padding: 1vh;
-    display: block;
-    color: inherit;
-  }
-  
-  .cta {
-    padding: 0.5em;
-    display: block;
-  }
-  
-  .menu a:hover {
-    cursor: pointer;
-    background-color: #333333;
-  }
-  
-  .cta:hover {
-    cursor: pointer;
-    background-color: #333333;
-  }
-  
+
   .footer {
-    background-color: #000000;
-    color: rgb(255, 187, 0);
-    font-family: "Oswald", "Bebas Neue", sans-serif, cursive;
-    font-size: 1.5rem;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-right: 5%;
-    padding-left: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  .footerText {
-    text-align: center;
-    display: block;
-    font-size: 0.8em;
-    font-weight: 300;
-    padding-right: 4%;
-    padding-left: 4%;
-  }
-  
-  @media (max-width: 60em) {
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
-  
-    .navbar div {
-      padding: 0 1vh;
-    }
-  
-    .footer {
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-  
-  
+}
