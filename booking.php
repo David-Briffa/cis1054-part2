@@ -6,3 +6,4 @@ require_once __DIR__.'/db-inc.php';
 echo $twig->render('booking.html');
 
 $minDate = date("Y-m-d");
+require_once 'footer.php';

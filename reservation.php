@@ -50,4 +50,4 @@ $db = new Db();
 
         $stmt = $db ->connect($sql);
 */
-  
+require_once 'footer.php';

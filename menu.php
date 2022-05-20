@@ -20,4 +20,5 @@ $db = new Db();
 $food = $db -> select("SELECT menuitems.ID, menuitems.name, menuitems.description, menuitems.Price, menuitems.Type as type FROM menuitems");
 
 echo $twig->render('menu.html', ['menuitems' => $food]);
+require_once 'footer.php';
 

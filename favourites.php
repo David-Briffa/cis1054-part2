@@ -31,7 +31,7 @@ function removeFavourite(){
         echo $twig->render('noFavourites.html');   
         //echoes out the noFavourites page if the session array is empty
 
-
+require_once 'footer.php';
 
 
 

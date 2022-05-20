@@ -36,3 +36,5 @@ if(isset($_GET['pid']))
 else
     echo $twig->render('404.html');
     //no pid, no page
+
+    require_once 'footer.php';
