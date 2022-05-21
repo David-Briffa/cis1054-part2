@@ -39,41 +39,42 @@ function validateEmail($email)
 }
 
 if (isset($_REQUEST["submit"])) {
+    $error = false;
 
     $name = $_REQUEST["name"];
     if (empty($name)) {
         $error = true;
-        $resultMessage = "Error: A name is required for the message to be sent. <br> Please try again.";
+        $resultMessage = "Error: A name is required for the message to be sent. Please try again.";
     } else if (!validateName($name)) {
         $error = true;
-        $resultMessage = "There was an error with your inserted name. <br> Please try again.";
+        $resultMessage = "There was an error with your inserted name. Please try again.";
     }
     $name = cleanStr($name);
 
     $number = $_REQUEST["number"];
     if (!validateNumber($number)) {
         $error = true;
-        $resultMessage = "There was an error with your number. <br> Please try again.";
+        $resultMessage = "There was an error with your number. Please try again.";
     }
     $number = cleanStr($number);
 
     $email = $_REQUEST["email"];
     if (!validateEmail($email)) {
         $error = true;
-        $resultMessage = "There was an error with your email. <br> Please try again.";
+        $resultMessage = "There was an error with your email. Please try again.";
     }
 
     $message = $_REQUEST["message"];
     if (empty($name)) {
         $error = true;
-        $resultMessage = "Error: A message is required. <br> Please try again.";
+        $resultMessage = "Error: A message is required. Please try again.";
     } else if (!cleanStr($message)) {
         $error = true;
-        $resultMessage = "There was an error with your message. <br> Please try again.";
+        $resultMessage = "There was an error with your message. Please try again.";
     }
 
     if (!$error) {
-        $resultMessage = "Message sent. <br> Have a good day!";
+        $resultMessage = "Message sent. Have a good day!";
     }
 
     $sql = "INSERT INTO menu.usr_msgs (msg_name, msg_number, msg_email, msg_content)
@@ -87,7 +88,7 @@ if (isset($_REQUEST["submit"])) {
 
     $stmt->execute();
 
-    echo $twig->render('formResult.html');
+    echo $twig->render('formResult.html', ['resultMessage' => $resultMessage]);
 } else {
     echo $twig->render('404.html');
 }
