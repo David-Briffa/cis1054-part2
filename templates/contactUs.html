@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block page_title %} Contact Us {% endblock %} {%
+block content %}
+<div class="middle">
+  <div class="divider"></div>
+  <div class="divider"></div>
+
+  <div class="bookingForm blackBorder">
+    <h2>REACH OUT TO US!</h2>
+    <br />
+    <div class="imgCall"></div>
+    <br />
+    <div class="content">
+      <h3>Complete form below please</h3>
+
+      <form action="contact.php" method="post">
+        <div class="formRow">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="tel" name="number" placeholder="Phone Number" />
+        </div>
+
+        <div class="formRow">
+          <input type="email" name="email" placeholder="Email Address" />
+        </div>
+
+        <div class="formRow">
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Insert your message here..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="formRow">
+          <input type="submit" name="submit" value="Send your message!" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="divider"></div>
+</div>
+{% endblock %}

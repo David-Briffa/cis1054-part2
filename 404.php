@@ -1,7 +1,5 @@
 <?php
-
 require_once __DIR__.'/bootstrap.php';
-require_once __DIR__.'/session.php';
 
-echo $twig->render('index.html');
+echo $twig->render('404.html');
 require_once 'footer.php';

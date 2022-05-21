@@ -1,1 +1,5 @@
-ErrorDocument 404 /part2/notFound.php
+ErrorDocument 404 /university/restaurant/404.php
+
+<Files "config.ini">
+    Require all denied
+</Files>
