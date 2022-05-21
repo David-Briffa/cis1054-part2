@@ -87,7 +87,7 @@ if (isset($_REQUEST["submit"])) {
     $name = $_REQUEST["name"];
     if (empty($name)) {
         $error = true;
-        $resultMessage = "Error: A name is required is required for the booking. <br> Please try again.";
+        $resultMessage = "Error: A name is required for the booking. <br> Please try again.";
     } else if (!validateName($name)) {
         $error = true;
         $resultMessage = "There was an error with your reservation name. <br> Please try again.";
@@ -116,6 +116,10 @@ if (isset($_REQUEST["submit"])) {
         $resultMessage = "There was an error with the number of people in your reservation. <br> Please try again.";
     }
 
+    if (!$error) {
+        $resultMessage = "Reservation completed. <br> See you soon!";
+    }
+
     // DONE IN FUNCTION validateDate
     // $d = \DateTime::createFromFormat('Y-m-d', $_REQUEST['date']);
     // if (!$d) {
@@ -125,7 +129,7 @@ if (isset($_REQUEST["submit"])) {
 
 
     //To improve security even more and prevent any type of SQL injection (examples of SQL injections inputs: "intended value OR 1=1", "'); AND DROP TABLE --" ).
-    $sql = "INSERT INTO reservations (res_date, res_time, res_name, res_number, res_email, res_people)
+    $sql = "INSERT INTO menu.reservations (res_date, res_time, res_name, res_number, res_email, res_people)
              VALUES (?, ?, ?, ?, ?, ?);
              "; //creating template for SQL statement using '?' as placeholders
     $params = [$date, $time, $name, $number, $email, $people]; //array of parameters that will take the place of said placeholders
@@ -136,7 +140,7 @@ if (isset($_REQUEST["submit"])) {
 
     $stmt->execute();
 
-    echo $twig->render('bookingResult.html');
+    echo $twig->render('formResult.html');
 } else {
     echo $twig->render('404.html');
 }
