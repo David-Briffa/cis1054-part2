@@ -49,12 +49,22 @@
         return true;
     }
 
+<<<<<<< Updated upstream
     function validateEmail($email)
     {
         if (strlen($email) > 45 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return false;
         }
         return true;
+=======
+    $name = $_REQUEST["name"];
+    if (empty($name)) {
+        $error = true;
+        $resultMessage = "Error: A name is required for the booking. <br> Please try again.";
+    } else if (!validateName($name)) {
+        $error = true;
+        $resultMessage = "There was an error with your reservation name. <br> Please try again.";
+>>>>>>> Stashed changes
     }
 
     function validatePeople($people)
@@ -122,10 +132,32 @@
         }
     }
 
+<<<<<<< Updated upstream
+=======
+    $people = $_REQUEST["peopleNumber"];
+    if (empty($people)) {
+        $error = true;
+        $resultMessage = "Error: Number of people is required for the booking. <br> Please try again.";
+    } else if (!validatePeople($people)) {
+        $error = true;
+        $resultMessage = "There was an error with the number of people in your reservation. <br> Please try again.";
+    }
+
+    if (!$error) {
+        $resultMessage = "Reservation completed. <br> See you soon!";
+    }
+
+    // DONE IN FUNCTION validateDate
+    // $d = \DateTime::createFromFormat('Y-m-d', $_REQUEST['date']);
+    // if (!$d) {
+    //     die("Data errata");
+    // }
+
+>>>>>>> Stashed changes
 
 
     //To improve security even more and prevent any type of SQL injection (examples of SQL injections inputs: "intended value OR 1=1", "'); AND DROP TABLE --" ).
-    $sql = "INSERT INTO reservations (res_date, res_time, res_name, res_number, res_email, res_people)
+    $sql = "INSERT INTO menu.reservations (res_date, res_time, res_name, res_number, res_email, res_people)
              VALUES (?, ?, ?, ?, ?, ?);
              "; //creating template for SQL statement using '?' as placeholders
     $params = [$date, $time, $name, $number, $email, $people]; //array of parameters that will take the place of said placeholders
@@ -163,6 +195,13 @@
 
     <?php include "footer.html" ?>
 
+<<<<<<< Updated upstream
 </body>
+=======
+    echo $twig->render('formResult.html');
+} else {
+    echo $twig->render('404.html');
+}
+>>>>>>> Stashed changes
 
 </html>
