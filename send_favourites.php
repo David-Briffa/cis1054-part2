@@ -66,12 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
                 $mail->setFrom($from);           
                 $mail->addAddress($to);       
-                $mail->Subject = $from .' is sending you their favourite dishes!';
-                $mail->Body    =  $twig->render('sentFavourites.html', ['menuitems' => $result] );              ;
+                $mail->Subject = $from .' is sending you their SupperThyme favourites!';
+                $mail->Body  =  $twig->render('sentFavourites.html', ['menuitems' => $result] );        
 
                 $mail->send();
                 $validations['pagemessage'] = "Email has been sent successfully. Thank you!";
-            } catch (Exception $e) {
+            }catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
             $formvalues = [];
