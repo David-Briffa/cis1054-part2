@@ -69,51 +69,56 @@ function validatePeople($people)
 
 
 if (isset($_REQUEST["submit"])) {
+    $error = false;
     $date = $_REQUEST["date"];
     if (empty($date)) {
         $error = true;
-        $resultMessage = "Error: Reservation date is required for the booking. <br> Please try again.";
+        $resultMessage = "Error: Reservation date is required for the booking. Please try again.";
     } else if (!validateDate($date)) {
         $error = true;
-        $resultMessage = "There was an error with your reservation date. <br> Please try again.";
+        $resultMessage = "There was an error with your reservation date. Please try again.";
     }
 
     $time = $_REQUEST["time"];
     if (empty($time)) {
         $error = true;
-        $resultMessage = "Error: Reservation time is required for the booking. <br> Please try again.";
+        $resultMessage = "Error: Reservation time is required for the booking. Please try again.";
     }
 
     $name = $_REQUEST["name"];
     if (empty($name)) {
         $error = true;
-        $resultMessage = "Error: A name is required is required for the booking. <br> Please try again.";
+        $resultMessage = "Error: A name is required for the booking. Please try again.";
     } else if (!validateName($name)) {
         $error = true;
-        $resultMessage = "There was an error with your reservation name. <br> Please try again.";
+        $resultMessage = "There was an error with your reservation name. Please try again.";
     }
     $name = cleanStr($name);
 
     $number = $_REQUEST["number"];
     if (!validateNumber($number)) {
         $error = true;
-        $resultMessage = "There was an error with your reservation number. <br> Please try again.";
+        $resultMessage = "There was an error with your reservation number. Please try again.";
     }
     $number = cleanStr($number);
 
     $email = $_REQUEST["email"];
     if (!validateEmail(filter_var($email, FILTER_SANITIZE_EMAIL))) {
         $error = true;
-        $resultMessage = "There was an error with your reservation email. <br> Please try again.";
+        $resultMessage = "There was an error with your reservation email. Please try again.";
     }
 
     $people = $_REQUEST["peopleNumber"];
     if (empty($people)) {
         $error = true;
-        $resultMessage = "Error: Number of people is required for the booking. <br> Please try again.";
+        $resultMessage = "Error: Number of people is required for the booking. Please try again.";
     } else if (!validatePeople($people)) {
         $error = true;
-        $resultMessage = "There was an error with the number of people in your reservation. <br> Please try again.";
+        $resultMessage = "There was an error with the number of people in your reservation. Please try again.";
+    }
+
+    if (!$error) {
+        $resultMessage = "Reservation completed. See you soon!";
     }
 
     // DONE IN FUNCTION validateDate
@@ -125,7 +130,7 @@ if (isset($_REQUEST["submit"])) {
 
 
     //To improve security even more and prevent any type of SQL injection (examples of SQL injections inputs: "intended value OR 1=1", "'); AND DROP TABLE --" ).
-    $sql = "INSERT INTO reservations (res_date, res_time, res_name, res_number, res_email, res_people)
+    $sql = "INSERT INTO menu.reservations (res_date, res_time, res_name, res_number, res_email, res_people)
              VALUES (?, ?, ?, ?, ?, ?);
              "; //creating template for SQL statement using '?' as placeholders
     $params = [$date, $time, $name, $number, $email, $people]; //array of parameters that will take the place of said placeholders
@@ -136,7 +141,7 @@ if (isset($_REQUEST["submit"])) {
 
     $stmt->execute();
 
-    echo $twig->render('bookingResult.html');
+    echo $twig->render('formResult.html', ['resultMessage' => $resultMessage]);
 } else {
     echo $twig->render('404.html');
 }

@@ -2,16 +2,18 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SupperThyme {% block page_title %} {% endblock %}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Styles/style.css">
-</head>
-<div class="header border">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Styles/style.css" />
+  </head>
+  <div class="header border">
     <nav class="navbar">
       <a href="index.php">
         <div class="logo">
@@ -20,30 +22,24 @@
           <p class="logoText">SupperThyme</p>
         </div>
       </a>
-  
+
       <div class="menu">
         <ul>
           <li><a href="./index.php">Home</a></li>
           <li><a href="./menu.php">Menu</a></li>
           <li><a href="./favourites.php">Favourites</a></li>
+          <li><a href="./contactUs.php">Contact Us</a></li>
         </ul>
       </div>
-  
+
       <div class="cta">
         <a href="./booking.php">Book now!</a>
       </div>
     </nav>
   </div>
-  
-<body>
 
-    {% block menu %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-</body>
-
+  <body>
+    {% block menu %} {% endblock %} {% block content %} {% endblock %}
+  </body>
 
 </html>

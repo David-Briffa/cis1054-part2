@@ -1,31 +1,32 @@
 {% extends "layout.html" %} {% block page_title %} Menu {% endblock %} {% block
-content %}
-
-<div class="slider border">
-  <div class="load"></div>
-  <div class="content"></div>
-  <div class="principal">
-    <h1>Menu</h1>
-    <p>"Our passion on a plate"</p>
+  content %}
+  
+  <div class="slider border">
+    <div class="load"></div>
+    <div class="content"></div>
+    <div class="principal">
+      <h1>Menu</h1>
+      <p>"Our passion on a plate"</p>
+    </div>
   </div>
-</div>
-<div class="menuMiddle">
-  {% for menuitem in menuitems %}
-
-  <div class="containerDishes blackBorder">
-    <h4><b>{{ menuitem.name }}</b></h4>
-    {{ menuitem.Price }}
-    <form action="menu_details.php?pid={{ menuitem.ID }}" method="post">
-      <input
-        type="submit"
-        name="goToFavourites"
-        class="favbutton"
-        value="Details"
-      />
-    </form>
+  <div class="menuMiddle">
+    {% for menuitem in menuitems %}
+  
+    <div class="containerDishes blackBorder">
+      <h4><b>{{ menuitem.name }}</b></h4>
+      {{ menuitem.Price }}
+      <form action="menu_details.php?pid={{ menuitem.ID }}" method="post">
+        <input
+          type="submit"
+          name="goToFavourites"
+          class="favbutton"
+          value="Details"
+        />
+      </form>
+    </div>
+    <div class="divider"></div>
+    {% endfor %}
   </div>
-  <div class="divider"></div>
-  {% endfor %}
-</div>
-
-{% endblock %}
+  
+  {% endblock %}
+  
