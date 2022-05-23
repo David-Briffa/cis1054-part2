@@ -23,14 +23,15 @@
     </form>
   </div>
   {% endfor %}
-  <span class="validation">{{ validations.pagemessage }}</span>
-  <div class="divider"></div>
+
   <div class="divider"></div>
   <div class="containerDishes border blackBorder">
     <br /><br />
+    {{ validations.pagemessage }}
+    {{ validations.emailError }}
     <form action="send_favourites.php" method="post">
-      <span class="validation">{{ validations.emailError }}</span>
 
+      <!--Email form-->
       <br /><br />Send this list to your friends!<br />
       &darr; <br /><br />
       <input
