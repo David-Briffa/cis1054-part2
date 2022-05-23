@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block page_title %} Favourites {% endblock %} 
+{% block content %}
+{% for menuitem in menuitems %}
+
+<div class="middle">
+  <div class="divider"></div>
+
+  <div class="containerDishes border blackBorder">
+    {% set counter = ( counter | default(0) ) + 1 %}
+    <h1>{{ counter ~ ' ). ' ~ item.title }}{{ menuitem.Name }}</h1>
+    <p>{{ menuitem.Description }}</p>
+    <p>{{ menuitem.Price }} €</p>
+
+    Remove dish from favourites! &#8594;
+    <form action="favourites.php?rmv={{ menuitem.ID }}" method="post">
+      <input
+        type="submit"
+        name="removeFavourite"
+        class="favbutton"
+        value=" &#x1F62D; "
+      />
+    </form>
+  </div>
+  {% endfor %}
+  <span class="validation">{{ validations.pagemessage }}</span>
+  <div class="divider"></div>
+  <div class="divider"></div>
+  <div class="containerDishes border blackBorder">
+    <br /><br />
+    <form action="send_favourites.php" method="post">
+      <span class="validation">{{ validations.emailError }}</span>
+
+      <!--Email form-->
+      <br /><br />Send this list to your friends!<br />
+      &darr; <br /><br />
+      <input
+        placeholder="your@email.com"
+        name="from"
+        class="email"
+        value="{{ formvalues.from }}"
+        required
+      /><br /><br />
+      <input
+        placeholder="yourfriend@email.com"
+        name="to"
+        class="email"
+        value="{{ formvalues.to }}"
+        required
+      /><br /><br />
+      <input
+        type="submit"
+        name="sendEmail"
+        class="favbutton"
+        value=" &#128231; "
+      /><br /><br />
+    </form>
+  </div>
+
+  <div class="divider"></div>
+</div>
+
+{% endblock %}
