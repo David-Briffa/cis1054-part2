@@ -16,3 +16,9 @@ e) a detailed description of each item on the menu (on a separate page from the 
 f) users should be able to add individual dishes to a “favourites” list (from within the dish details page),
 
 g) which list can then be accessed from a dedicated page, listing all the marked dishes (and their details), while allowing users to remove dishes from the list or send the entire list to an email address of their choice.
+
+
+************
+INSTRUCTIONS
+************
+This website uses Twig and PhPMailer through composer
