@@ -21,4 +21,4 @@ g) which list can then be accessed from a dedicated page, listing all the marked
 ************
 INSTRUCTIONS
 ************
-This website uses Twig and PhPMailer through composer
+This website uses Twig and PhPMailer which need to be 'composer required' through CMD into the project directory 
