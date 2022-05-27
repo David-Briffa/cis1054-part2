@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 require_once __DIR__.'/bootstrap.php';
 require_once __DIR__.'/db-inc.php';
 require_once __DIR__.'/session.php';
@@ -10,6 +13,9 @@ function clean_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+$mail = new PHPMailer(true);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
         $emailErr  = "";
@@ -20,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $from = clean_input($_POST["from"]);
             if (!filter_var($from, FILTER_VALIDATE_EMAIL))
             {
-                $emailErr= 'One of the emails is invalid';
+                $emailErr= 'Your email is invalid';
                 $validations['emailError'] = $emailErr;
             }
         }
@@ -28,35 +34,60 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $to = clean_input($_POST["to"]);
             if (!filter_var($to, FILTER_VALIDATE_EMAIL))
             {           
-                $emailErr= 'One of the emails is invalid';
+                $emailErr= 'The recipient\'s email is invalid';
                 $validations['emailError'] = $emailErr;
             }
         }
         else
-        {
+        {   //failsafe in case the html required tag doesn't work
             $emailErr = "Email is required";
             $validations['emailError'] = $emailErr;
         }
 
-        //If all's ok
         if (empty($emailErr))
         {
-            //Onward processing using mail() or PHPMailer() passing in the $type, $email and $message vars
-            $validations['pagemessage'] = "Email has been sent successfully. Thank you!";
-            $formvalues = [];
+                $db = new Db(); 
+            $implodedArray = implode(", ",$_SESSION["favourite"]);  //splits the array into numbers that can be used in the query below   
+            $result = $db -> select("SELECT ID, Name, Description, Price, Type FROM menuitems WHERE menuitems.ID IN (" . $implodedArray . ")");
+    
+            if(count($result) > 0){
+            try {
+                //standard setup for PhPMailer
+                $mail->SMTPDebug = 0;                                       
+                $mail->isSMTP();                                            
+                $mail->Host       = 'smtp.gmail.com;';                    
+                $mail->SMTPAuth   = true;   
+                $mail->SMTPSecure = 'tls';                              
+                $mail->Port       = 587;                      
+                $mail->Username   = 'davidbriffahost@gmail.com';                 
+                $mail->Password   = 'ultrasafepassword'; 
+                $mail->isHTML(true);                                  
 
+                $mail->setFrom($from);           
+                $mail->addAddress($to);       
+                $mail->Subject = $from .' is sending you their SupperThyme favourites!';
+                $mail->Body  =  $twig->render('sentFavourites.html', ['menuitems' => $result] ); //sends the favourites as an html file       
+
+                $mail->send();
+                $validations['pagemessage'] = "Email has been sent successfully. Thank you!";
+            //validation for success or failure
+            }catch (Exception $e) { 
+                $validations['pagemessage'] = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            }
+            $formvalues = [];
+            $mail-> smtpclose();
+        }
+    
         }
         else
-        {
-            $validations['pagemessage'] = "Please check that the emails are correct";
-            //Repopulate text fields with submitted data if emails are incorrect 
-            $formvalues['to'] = $to;
+        {   //refills the input text in the event of an error 
+            $formvalues['to'] = $to;  
             $formvalues['from'] = $from;
         }
 
         echo $twig->render('favourites.html', [
             'validations' => $validations,
-            'formvalues' => $formvalues,
+            'formvalues' => $formvalues, 
         ]);
     }
     else {

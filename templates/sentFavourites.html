@@ -1,0 +1,10 @@
+{% block content %} 
+{% for menuitem in menuitems %}
+<h1>{{ menuitem.Name }}</h1>
+<p>{{ menuitem.Description }}</p>
+<p>{{ menuitem.Price }} €</p>
+{% endfor %}
+
+<p>visit http://localhost/university/Restaurant/ and build your own list!</p>
+
+{% endblock %}
