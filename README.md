@@ -21,4 +21,6 @@ g) which list can then be accessed from a dedicated page, listing all the marked
 ************
 INSTRUCTIONS
 ************
-This website uses Twig and PhPMailer which need to be 'composer required' through CMD into the project directory 
+This website uses Twig and PhPMailer which need to be 'composer required' through CMD into the project directory. 
+
+As instructed, the composer json and lock files are in the repository, but vendor needs to be accounted for on your end. 
