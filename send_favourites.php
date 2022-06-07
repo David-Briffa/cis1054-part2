@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                 $mail->SMTPSecure = 'tls';                              
                 $mail->Port       = 587;                      
                 $mail->Username   = 'davidbriffahost@gmail.com';                 
-                $mail->Password   = 'ultrasafepassword'; 
+                $mail->Password   = 'ydtojkbclxftwhbu'; 
                 $mail->isHTML(true);                                  
 
                 $mail->setFrom($from);           
